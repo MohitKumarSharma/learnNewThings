@@ -1,0 +1,33 @@
+Interpolation is written in currly braces.
+IT is generally used to show data view on ui. Bind with class level variable in class of component.
+{{title}} angular binding syntax of interpolation.
+
+Always export componant class. So that you can import component anywhere.
+
+@Component is a decorator function that specifies the Angular metadata for the component.
+lieke selector, templateUrl, styleUrl,
+
+Css element selector "app-heroes" that matches with html element that defines that this cmp,
+Within parent componant template.
+
+<App-heros> is element selector for hero componant. So add app-hero component.
+
+Pipes are good way to format string date etc. angular has a lot of pipe.
+{{hero.name | uppercase }}
+ ( | ), activates the built-in UppercasePipe.
+ 
+ Two way data binding for this we [(ngModel)] directive.
+ 
+ AppModule: anuglar need to know. How the piece of fit together and what other libraries required
+ . This information is called metadata.
+ 
+ Some of the metadata is inside component decorator which we added into component class. And othe 
+ crucial metadata is inside @ngModule decorator.
+ 
+ ngModel is available inside formsModule.
+ Read about this in details later.
+ 
+ Decalre componant: evry componant should be declared exactly in one componant. check in app.moduele
+  current componant is declared.
+  
+  Check about bootstrap componant.

@@ -1,0 +1,68 @@
+https://www.youtube.com/watch?v=ZoeZxpfTCXk&index=29&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
+
+Start of angular will see later.
+internal/modules/cjs/loader.js:583
+    throw err;
+    ^
+	Could not find module "@angular-devkit/build-angular" from "F:\\Study\\LearnJava
+\\FirstAnguPratice".
+Er
+
+npm install --save-dev @angular-devkit/build-angular
+
+:/id is a place holder for route parameter
+
+paramMap is observable, so whener params change it redid the code. reset the value.
+
+Optional param: Its optional. This does not affect the view. Just read it throuh route and
+acivate reoute parammeter and using params get the values. so some process and show.
+Activate route parameter
+Router
+
+Relative nagatic
+route : it has relativeTo. that method have some overlaoded use that 
+read about router and activateRouter.
+
+childRoutes add it in appRoutes and inside is parent route add as childred
+<router-outlet> componenant to show it on . It seems like palceholder.
+
+rx js 5 to 6 is major changes
+
+Service change
+
+ngModelChange event
+
+ng update/add
+ng material.
+
+How we can see
+
+Which server angualr use?
+
+Component: IT is fundamental base of apps. It shows ui to user, and interact with user take input and take 
+action based on that.
+
+As part of initial app, first component is app componenant.
+Check about how to write test cases in angular.
+
+Component:
+Decorator: We have attached metadata in the form decorator.
+It tells it is not simple class its decorator.
+component: class + decorator + template which represent the view.
+
+DI as framework
+Sra,
+Define service class
+register with inject
+declare as dependency
+using provider metadata, can be used any where.
+
+How we are going to approach.
+Stick to the plan. Be confident.
+Read in company, say if you dont understand, dont be more intellignet. Be what you are
+say if you dont understand. Ask Anmol, if possible we can do kt after lunch.
+did not get much time for study say that.
+
+Study in office new framework. If you get the time.
+Will try at here also. It is new tech will have to give time
+
