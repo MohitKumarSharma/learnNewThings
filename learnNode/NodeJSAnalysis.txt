@@ -1,0 +1,1 @@
+Nodejs is js which is used at server side.
