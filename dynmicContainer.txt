@@ -1,0 +1,112 @@
+see inside the ng://
+module factory
+Read about changeDetectionStrategy how it works
+structure directives
+
+@Componentn({
+	template: '<ng-template #vc></ng-template>'
+});
+
+export class HomeComponent {
+	@ViewChild('vc', {read: ViewContainerRef}) vc;
+}
+
+How is it instantiated
+
+constructor(private cfr: ComponentFactoryResolver, private injector: Injector) {};
+
+appDynamicComponent() {
+ const compFactory = this.cfr.resolveComponentFactory(NoteComponent);
+ // const compRef = compFactory.create(this.injector);
+ // this.vc.insert(compRef.hostView);
+ // send or pass input data
+ compRef.instance.data = this.getData();
+ 
+ // bind output data
+ compRef.instance.event.subscribe(console.log());
+ 
+ // change detection works
+ ngOnChanges will not works but ngDoCheck will run
+ this.vc.createComponent(compFactory);
+}
+
+unknown is complile time.
+lazy loaded modules.
+
+
+1 hours edit, sendTestMessage
+
+
+1 /delete/enable/disable/download/
+
+2 validation on each field
+masking
+
+
+lazy loaded modules
+
+constructor(private loader: NgModuleFactoryResolver, private injector: Injector) {};
+
+appDynamicComponent() {
+const loader = this.loader.load('pathtomodule/plugin.module#PluginModuel').
+then(factory => {
+	const module = factory.create(this.injector);
+	const cfr = module.componentFactoryResolver;
+	const cmpFactory = cfr.resolveComponentFactory(pluginComponent);
+	this.vc.create(cmpFactory);
+});
+ const compFactory = this.cfr.resolveComponentFactory(NoteComponent);
+ // const compRef = compFactory.create(this.injector);
+ // this.vc.insert(compRef.hostView);
+ // send or pass input data
+ compRef.instance.data = this.getData();
+ 
+ // bind output data
+ compRef.instance.event.subscribe(console.log());
+ 
+ // change detection works
+ ngOnChanges will not works but ngDoCheck will run
+ this.vc.createComponent(compFactory);
+}
+
+Build a moudle seperately with angular cli.
+angular.json
+
+Use providers
+@NgModule({
+	declarations: [PluginComponent],
+	entryComponets: [PluginComponent]
+	providers: [{
+		provide: 'widget',
+		useValue: {
+			name: 'plugin-cmp',
+			component: PluginComponent
+		},
+		multi: true
+	}]
+});
+
+
+
+check about routing
+const module = factory.create(this.injector);
+	const cfr = module.componentFactoryResolver;
+	const widgets = moduel.injector..get('widget');
+	const cmpFactory = cfr.resolveComponentFactory(widgets[0][0].component);
+	this.vc.create(cmpFactory);
+	
+	
+Check about the path inside the 
+app.module.ts
+cosnt routes = [
+	{path: "", component: HomeComponent},
+	{path: "lazy", loadChildren: "app/lazy/lazy.module#LazyModule"}
+];
+
+expoty const routing: ModuleWithProvider = RouterModule.forRoot(routes);
+at root level.
+
+check about router outloet.
+
+chunk file .
+what is for routes, check about that.
