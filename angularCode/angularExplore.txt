@@ -1,0 +1,44 @@
+https://hackr.io/blog/angular-interview-questions
+https://hackr.io/blog/angular-interview-questions
+
+:host ::ng-deep input {
+border: none;
+outline: none
+}
+
+
+ @ContentChild(InputRefDirective)
+  input: InputRefDirective;
+  
+  Using this we get the reference of directive
+  using this we get the reference of focys
+  
+  https://blog.angular-university.io/angular-ng-content/
+  
+  read about promise and difference between promise and observalble
+  
+  there are three type of directive. read about in details
+  attribute, structural, custom
+  
+  Building blocks of angular.
+  9 essential building blocks
+  
+  AOT definistion semes to be wrong read about more
+  
+  TwoWay data binding ngModel is used for this type of data binding.
+  
+  read about runtimei18
+  
+  read about decorator
+  as dummy decorator
+  function dummy() {
+	// Dummy decorator/
+  }
+  
+  
+  Read about viewEncapsulation, howmany ways to do it.
+  
+  Typescritp is developed by miscrosoft is super set of js.
+  
+  Check about ng-template
+  https://blog.angular-university.io/angular-ng-template-ng-container-ngtemplateoutlet/
