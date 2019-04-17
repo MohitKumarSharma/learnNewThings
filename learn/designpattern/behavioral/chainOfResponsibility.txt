@@ -1,0 +1,51 @@
+In this client sends a problem to object if that can solve return the solutino if can't pass to another object.
+
+Chain of responsibility..
+
+interface Chain {
+	void setNextChain(Chain chain);
+	void calculate(Numbers);
+}
+
+class AddNumbers {
+	Chain chain;
+	
+	public void setNextChain(Chain _chain) {
+		this.chain = _chain;
+	}
+	
+	public void calculate(Numbers numbers) {
+		if (number.getOperation() == "add") {
+			Syso(numbers.getFirstNumber() + numbers.getSecondNumber());
+		} else {
+			this.chain.calculate(numbers);
+		}
+	}
+}
+
+
+// same for SubtractNumber/ DividNumber
+
+Numbers {
+	int num1;
+	int num2;
+	String operation; // have setter getter and constrauctor.
+}
+
+
+public class User/Client {
+	psvm() {
+		AddNumbers add = new AddNumbers();
+		SubtractNumber subtract = new SubtractNumber();
+		
+		add.setNextChain(subtract);
+		subtract.setNextChain(divide);
+		
+		Numbers numer = new Numbers(41, 10, subtract);
+		
+		add.calculate(number);
+		// First it will go to add number and then redirected from ther to subtract object or class.
+	}
+}
+
+principle if you can solve, solve it other wise delegate to next in chain.

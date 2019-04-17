@@ -1,0 +1,30 @@
+See about interface issue by inheriting .
+
+https://www.javabrahman.com/programming-principles/open-closed-principle-with-examples-in-java/
+
+this principle say class should not be modified as requiredment change, it can be extended if required.
+
+this above example proper explain the things.
+
+
+The situation in which you have to modify a lot of files to add a new feature is a classic violation of the Open/Closed Principle:
+
+There’s no magic spells or formulas. All you need is four keywords: abstract, extends, interface, and implements 
+https://dzone.com/articles/the-power-of-openclosed-principle
+not good
+
+https://stackify.com/solid-design-open-closed-principle/
+
+AreaCalulatorExample
+
+AreaCalulatorExample {
+	public int calculateRactngleArea(Rectangle rec) {
+		return rec.length*rect*breadth;
+	}
+}
+
+Done
+Factory done
+threading
+collection
+Bridge

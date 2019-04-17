@@ -1,0 +1,39 @@
+Multithreading is used to obtain multitasking.
+It is a separate path of execution because each thread runs in a different stack frame.
+
+A thread is a lightweight subprocess. 
+A process may contain multiple thread, it is separate path of execution because each thread run in different stackframe.
+Example like inside java process can containe multiple threads.
+
+Process have different address space in memory, while threads contain a shared address space.
+
+wait method is present on object class. it should always be called from synchonized block otherwise it will throw illegalmonitor exception.
+
+It is used for interthreadcommunication, always paired with notify and notifyall.
+
+Multithreading provides better utilization of cache memory as threads share the common memory resources.
+
+In Context switching the state of the process (or thread) is stored so that it can be restored and execution can be resumed from the same point later. Context switching enables the multiple processes to share the same CPU.
+
+
+Check about class level and object level lock
+
+
+bridge design pattern: 5 minute
+collection 15 minute
+
+builder design pattern.
+
+Race condition
+
+
+threadPool
+
+CopyOnWriteArrayList, ConcurrentHashMap are failsafe iterator example
+
+
+ guarantee of sequence in which the waiting thread will be given the access,The methods of Lock interface, i.e., Lock() and Unlock() can be called in different methods whereas single synchronized block must be fully contained in a single method.
+ 
+ fair policy kind of
+ 
+  What is the difference between Synchronous programming and Asynchronous programming regarding a thread?

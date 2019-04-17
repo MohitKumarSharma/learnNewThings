@@ -1,0 +1,51 @@
+Observer design Pattern is used to when
+ when one object state change there are many other object or class depends on that state.
+ 
+ best example could
+ magzine subscriber/publisher.
+ When you like a magaing register to subscribe monthly/or new changes comes in magazine
+ Publisher does not care about who you are how you use it. he just give the magazine if you are registered monthyl or when new magazine comes.
+
+
+So Subjet is the interface
+
+interface Observer {
+	update(Object data); // may be argument based
+}
+ 
+interface Subject {
+	void register();
+	void unregister();
+	notifyObserver();
+} 
+
+
+class CricketData implements Subjec {
+	ArrayList<Observer> observerList = new ArrayList<>();
+	this.runs = 5;
+	this.wicket = 10;
+	
+	register(Observer o) {
+		this.observerList.add(o);
+	}
+	unregister(Observer o){
+		this.observerList.remove(o);
+	}
+	
+	notifyObserver() {
+		for(Observer o: this.observerList) {
+			o.update(runs, wicket // or new data);
+		}
+	}
+	
+	public void dataChange() {
+		// call when data change
+		this.notifyObserver();
+	}
+}
+
+class currentScoreDisply {
+	public void update(runs, wicket) {
+		syso(runs, wicket);
+	}
+}

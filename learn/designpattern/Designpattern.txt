@@ -1,0 +1,26 @@
+Check about rule class in hdca see which design pattern they have used
+
+Check about session how we have used, how we are using.
+
+How garbage collection is implemented in java
+
+
+Redntrantlock
+semaphore
+counddownlatch
+
+
+these things need to study
+
+
+semaphore takes a lock on the object.
+
+
+Visitor
+Iterator
+Template
+
+system design questions.
+
+Start refactring questions.
+

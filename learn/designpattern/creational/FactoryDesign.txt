@@ -1,0 +1,38 @@
+Calender Api is 
+its facotry design pattern not a singleton instance
+
+Calender cal = Calender.getInstance();
+
+Today we are going to finish
+
+Factory Design pattern 1 h done
+
+Testng finishing and discussion 1h
+
+Reafactring example using dependency inversion 1h
+
+One system design question 1h
+See One threading questions 1h
+Read about some collection questions .
+
+Dynamic Programming. 2h
+Bridge Design Pattern 1 h
+
+Astract class can have constructor.
+
+class WebSiteFActoy {
+	public WebSite getWebSite(String _type) {
+		switch(_type) {
+			case "blog"
+			return new BlogWebSite();
+			
+			...
+			
+		}
+	
+	}
+}
+
+We can use enum for this type
+
+Design from  starting.

@@ -1,0 +1,117 @@
+Strategy pattern
+is policy pattern.
+pattern that enable algorithm patten selected at runtime.
+https://www.journaldev.com/1754/strategy-design-pattern-in-java-example-tutorial
+https://www.youtube.com/watch?v=-NCgRD9-C6o&t=463s
+
+makes algorithm interchangable at runtime.
+
+
+this recommoned use of composition instead of inheritance.
+
+When you have many strategy that are changing at runtime. in that case strategy pattern comes to rescu.
+Best example in java
+
+As per statement strategy pattern is very similar to state pattern
+let see that also when get the time.
+Comparable sore
+
+ArrayList<Node> nodeList = new ArrayList<>();
+class NodeSorter implement Comparable {
+	public boolean compare(Node n1, Node n2) {
+		return n1.getValue() - n2.getValue();
+	}
+}
+
+class NodeSorterUsingPrice implement Comparable {
+	public boolean compare(Node n1, Node n2) {
+		return n1.getValue() - n2.getValue();
+	}
+}
+NodeSorterUsingPrice nsp = new NodeSorterUsingPrice();
+nodeList.sort(nsp);
+
+
+getWayExample to pay different strategy.
+
+CreditCardStrategy
+PayPalStrategy
+
+ShoppingCart cart = new ShoppingCart();
+cart.add(new Item(i1));
+cart.add(new Item(i1));
+
+cart.pay(new CreditCardStrategy());// pay using that strategy.
+cart.pay(new PayPalStrategy());
+
+see about dry principle, how we can do.
+
+See about constructor things
+
+Another way of
+We have Animal Class
+
+Dog:
+Bird:
+
+
+Now we want to add functinality fly in the bird.
+and also want it can change at runtime means if bird getw would it should stop flying.
+how can do.
+
+we can have interface 
+interface Flys {
+	void fly();
+}
+
+class canFly implements Flys{
+	void fly() {
+		System.out.println("can fly");
+	}
+}	
+
+class cantFly implements Flys{
+	void fly() {
+		System.out.println("can't fly");
+	}
+}	
+
+
+Now we will have
+class Animal {
+	Flys flytingType;
+	
+	public void tryToFly() {
+		this.flytingType.fly();
+	}
+	
+	public void setFlyType(Flys flyType) {
+		this.flyType = flyType;
+	}
+}
+
+Now in dog class call
+
+class Dog {
+	Dog() {
+		flyType = new CantFly();
+	}
+}
+
+
+psvm() {
+	Dog dog = new Dog();
+	dog.tryToFly(); // cant fly
+	dog.setFlyType(new Canfly()); // got magic power start flying.
+}
+
+
+Or simple
+Strategy is interface which can have many child strategy.
+
+context which has strategy relationship
+will call fumction on strategy which it contains
+strategy isntacen can be passed or set later after context object create using setter.
+in context class just
+operation method
+strategy.doOperation()

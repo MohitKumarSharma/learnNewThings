@@ -1,0 +1,43 @@
+https://www.youtube.com/watch?v=KmAyPUv9gOY&t=7s
+
+
+Loadbalancer
+loadSharing:
+
+chornonolgical update that time lines
+
+Tweeting
+Timeline
+	User
+	Home:  to see the other followed people tweets, should be in chornonolgical order.
+Follwing
+	
+	
+User Table
+id: name:
+
+Tweets Table
+id content time userId  (n -> 1 user)
+
+
+follower table
+userid follower id list
+
+
+
+Alice does a tweets
+
+hits the loadbalancer
+
+Issue with relational databases is
+Select all tweets from all followed person by alice and put it in chornonolgical order.
+
+This query will break the system if followed person is huge. Because of this we can go in memory base data redis and also other for like document based
+data base.
+
+once used does a tweets, it preevalute the profile of all the follower person at that time.
+Issue with whatif justin beiber or lady gaga tweets, thy have millions of user.
+
+in that cases that type of profiles tweets will be added in the user profile at the time of browsing by user.
+
+to see which redis we will use hashing to find the index of redis of user.

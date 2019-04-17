@@ -1,0 +1,10 @@
+BFs inn graph
+
+have 
+List of array for adjancy metrices.
+have visited array to not repeat the visit.
+
+Use queue data structure for this visit .
+
+in dfs we may have to use stack data structure.
+that is the difference.

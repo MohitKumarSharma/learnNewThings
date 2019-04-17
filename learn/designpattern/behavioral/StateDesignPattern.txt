@@ -1,0 +1,71 @@
+StateDesignPattern: done
+
+ChainRespnisibility: 45 done.
+
+Open-Close Princle Video. 1h done
+
+
+One SystemDesignQuestin 1h
+or 
+Threading questins 30 minutes
+
+State design pattern is similar to strategy desing pattern but difference .
+
+In case of strategy: 
+Cleint provide the stategy, client provid the strategy to context.
+
+but in case of state.
+state transition is managed by context or state itself.
+in vending machine or atm we have in starting item but after sometime after finishing the item
+its state change.
+
+may in 
+in starting 
+
+interface state {
+	process();
+	
+}
+
+class HaveItem {
+	procees() {
+	
+	}
+}
+
+class NotHaveItem {
+procees() {
+	
+	}
+}
+
+class Context {
+	State state;
+	
+	Context() {
+		this.state = new HaveItem();
+	}
+	
+	public void run() {
+		// after finishing the item. // if change the state assing new state
+		
+		this.state = new NotHaveItem();
+	}
+	
+	public void process() {
+		this.state.process();
+	}
+}
+
+Intetntion:  Strategy: Family of algortih which client can pass.
+State:  manages state of the object along iwth object which changes with state.
+
+State:  client iteract with context but does not decide which state to choose. on the interaction context itself decide which state to choose like above example.
+
+Each state in this pattern hold the context reference but incase of statey not true.
+
+Relation between state:
+Each state either predecor or successor of any state mean related to each other. but strate are not related no successor or predecor kind of thing . they are family of algortih.
+
+States are allowed to replace themselves (IE: to change the state of the context object to something else), while Strategies are not.
+Strategies are passed to the context object as parameters, while States are created by the context object itself.

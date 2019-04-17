@@ -1,0 +1,61 @@
+Decouple de
+
+Bridge between abstraction and implementation class.
+
+Both Abstraction and implementation should be extensible.
+
+We need to implementation multple object.
+
+https://www.youtube.com/watch?v=AvszFRYvvt0&t=31s
+
+In Bridge design 
+
+Two different object going to solve one problem
+
+There are two logical seperated entitiy.
+
+Abstraction =>  which is used by client, it alos has reference of implementor.
+Implementor =>  which is  used from inside the abstraction.
+
+Abstraction 
+Like
+
+DrawApi {
+	drawApi();
+}
+
+Red impmenets DrawApi {
+	drawApi() {
+		syso("abc");
+	}
+}
+
+Implementor
+Shape {
+	Shape(DrawApi api) {
+		this.api = api;
+	}
+	
+	draw();
+}
+
+Circle extenbds Shape {
+	Circle(x, y, drawPai) {
+		supre(drawApi);
+	}
+	
+	draw() {
+		this.drawApi.drawApi();
+	}
+}
+
+client {
+	psvm() {
+		DrawApi api = new RedApi();
+		
+		Circle circle = new Circle(5, 6, api);
+		
+		circle.draw();
+	}
+}
+

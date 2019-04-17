@@ -1,0 +1,90 @@
+Composite Design Pattern:
+https://www.geeksforgeeks.org/composite-design-pattern/
+Composite design pattern is used when you see the composition of object and individual as same.
+
+Or you want to perform same operation on both compostion and leaf
+
+See this pattern as
+Composite and leaf
+
+When operation request goes to composite it forward to child nodes and continues when child node is leaf node. and leaf node does the main task like getSalary, showDetails etc. means perform the actual task.
+
+
+composite lets client trea individual and composite uniformly.
+It use has relations
+
+for uniformity it uses the interface or component interface.
+Which is implements by other classes or we can leaf classes. It also implements default behaviour common to all classes.
+for emlplyee
+salary
+name
+etc
+
+Leaf defined the primitiv object behaviour.
+
+Composite store the child and other composites 
+
+
+And client manipulate  the objects in the composition through component interface.
+
+Exmpale
+
+interface Employee {
+	public void showEmployeeDetails(); // showing default implementation
+}
+
+class Developer {
+	String name;
+	int salary;
+	
+	public void showEmployeeDetails() {
+		sop(name + salary);
+	}
+}
+
+class Manager {
+	String name;
+	int salary;
+	
+	public void showEmployeeDetails() {
+		sop(name + salary);
+	}
+}
+
+class CommpayDirectory implements Employee{
+	ArrayList<Employee> al = new ArrayList<>();
+	
+	public void addEmplyee(Employee e) {
+		this.add(e);
+	}
+	
+	public void showEmployeeDetails() {
+		for (Employee e: this.al) {
+			e.showEmployeeDetails();
+		}
+	}
+}
+
+class Client {
+	psvm() {
+		Developer d1 = new Developer("mohit", 55);
+		Developer d2 = new Developer("mohit", 55);
+		
+		CommpayDirectory dd = new CommpayDirectory();
+		dd.add(d1);
+		dd.add(d2);
+		
+		Manager m1= new Manager("yifd", 46);
+		
+		CommpayDirectory md = new CommpayDirectory();
+		md.add(m1);
+		
+		CommpayDirectory cd = new CommpayDirectory();
+		
+		cd.add(dd);
+		cd.add(md);
+		
+		cd.showEmployeeDetails();
+	}
+}
+

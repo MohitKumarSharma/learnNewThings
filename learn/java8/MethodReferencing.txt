@@ -1,0 +1,91 @@
+Write some comparator to test
+withod type how it can dedeuce type
+
+https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
+
+List<Ingeger> li =new ArraysList<>();
+li.forEach(system.out:: println);
+
+method referencing How we can do check again. see method referencing video
+
+Check about Null design pattern
+
+it is used for referencing jsut one method like functional interface
+
+
+But sometimes, the lambda expression is really just a call to some method, for example:
+
+Consumer<String> c = s -> System.out.println(s);
+
+To make the code clearer, you can turn that lambda expression into a method reference:
+
+Consumer<String> c = System.out::println;
+
+
+Instead of using
+AN ANONYMOUS CLASS
+you can use
+A LAMBDA EXPRESSION
+And if this just calls one method, you can use
+A METHOD REFERENCE
+
+
+There are four types of method references:
+
+A method reference to a static method.
+A method reference to an instance method of an object of a particular type.
+A method reference to an instance method of an existing object.
+A method reference to a constructor.
+
+
+ObjectType::instanceMethod
+This time, the conversion is not that straightforward. First, in the method reference, we don't use the instance itself—we use its type.
+
+Second, the other argument of the lambda expression, if any, is not used in the method reference, but it's passed behind the curtains like in the static method case.
+
+// Using a method reference
+calculateOnShipments(l, Shipment::calculateWeight);
+
+
+Sum s, String arg1, String arg2) -> s.doSum(arg1, arg1)
+To
+
+Sum::doSum
+
+// Using a method reference
+execute(car, mechanic::fix);
+
+
+When we need to create new object using method referencing.
+Supplier<List<String>> s = new Supplier() {
+  public List<String> get() {
+    return new ArrayList<String>();
+  }
+};
+List<String> l = s.get();
+
+
+Supplier<List<String>> s = () -> new ArrayList<Stirng>();
+
+Supplier<List::new> s;
+List<String> l = s.get();
+
+
+// Using an anonymous class
+Function<String, Integer> f =
+  new Function<String, Integer>() {
+    public Integer apply(String s) {
+      return new Integer(s);
+    }
+};
+Integer i = f.apply(100);
+
+// Using a lambda expression
+Function<String, Integer> f = s -> new Integer(s);
+Integer i = f.apply(100);
+
+// Using a method reference
+Function<String, Integer> f = Integer::new;
+Integer i = f.apply(100);
+
+ou can see that referencing a constructor is very similar to referencing a static method. The difference is that the constructor "method name" is new.

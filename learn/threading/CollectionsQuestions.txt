@@ -1,0 +1,30 @@
+LinkedList take more space than arraylist as it store object and refrence alos while arrayList store object.
+
+ListIteraor add remove and set
+
+Enumeration is not fail-fast.
+Iterator is fail-fast
+
+Enumeration is faster than Iterator.
+
+The Iterator can perform remove operation while traversing the collection.
+
+Check about hashMap and treeMap
+
+
+The Comparator provides multiple sorts of sequences.
+it provides one method named compare(object obj1, object2).
+
+If we implement the Comparable interface, The actual class is modified.
+
+The hashCode() method returns a hash code value (an integer number).
+
+The hashCode() method returns the same integer number if two keys (by calling equals() method) are identical.
+
+The equals method is used to check whether two objects are the same or not. It needs to be overridden if we want to check the objects based on the property.
+
+For example, Employee is a class that has 3 data members: id, name, and salary. However, we want to check the equality of employee object by the salary. Then, we need to override the equals() method.
+
+fail-fats iterator does not require any extra space in memory.
+
+Collections.unmodifiableCollection()

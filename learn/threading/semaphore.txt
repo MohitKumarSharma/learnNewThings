@@ -1,0 +1,5 @@
+Sempahore
+It has set of permisson means how many thread can aaccess a shared resource concurrently.
+
+Sempahore sem = new Sempahore(4);
+4 is permits means shared resource can be accessed by 4 resources

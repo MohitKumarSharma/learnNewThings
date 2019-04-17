@@ -1,0 +1,175 @@
+Why lambda:
+
+To make the anonymous class more readable.
+To make instance of anonymous class easier to write to read;
+
+Its another way of writing instances of anonymous classes.
+
+In anonymous class code is bit cluttered by technical details names creation of anonymous class
+
+Runnable r = () -> {
+	syso("mohit");
+}
+
+Comparator comp = (string s1, string s2) -> s.compareTo(s2);
+
+Check about returning things. Is the last line is consider always returning statement in case function return .
+As in comparetor we have not written return statement.
+
+Test using code.
+
+
+Q
+type of lambda: Functional Interface
+It is interface which has one abtract method.
+
+all method were abstract
+all field were
+public static final variables
+
+We can use annotation @FunctionalInterface on interface which is funcitonal. This is optional.
+It is best practice if we use because it can show compiler error if interface is not funcitonal.
+
+another 
+object mehtod is not counted.
+
+Can labda be put in variable.
+Comparator comp = (string s1, string s2) -> s.compareTo(s2);
+
+it can be passed as method params and return from method.
+
+is lamda object
+
+Creating a object is very heavy
+allocating metmory.
+initialize static field
+liek calling static block
+non static initialize
+not static block
+calling constructor
+calling supre constructor.
+rel
+in
+
+in lamda ;
+It does not create object.
+jvm does not create object every time I use lambda.
+it is much less work for jvm, performance is much better in lambda.
+then how it works Check
+
+answer is complex no.
+in jvm lmbda experessin is recorded is object.
+Exact Answer: It is an object without an itentity.
+
+
+function interface tool box
+
+java.uti.funcion
+with rich set of funcitonal interface: 43
+
+4 Category
+interface Supplier<T> {
+	public T get();
+}
+
+interface Consumet<T> {
+	public void accert(T t);
+}
+
+// syso
+
+interface BConsumet<T, U> {
+	public void accert(T t, U u);
+}
+
+interface Predicate<T> {
+	public boolean test(T t);
+}
+
+interface BiPredicate<T, U> {
+	public boolean test(T t, U u);
+}
+
+interface Function<T, R> {
+	public R apply(T t);
+}
+
+interface BiFunction<T, U, R, > {
+	public R apply(T t, U u);
+}
+
+Now category
+supplier
+consumer
+predicate
+Function
+
+for function
+public interface UnaryOperator<R> extends Function<T, T> {
+	public T apply(T t);
+}
+
+public interface BinaryOperator<R> extends BiFunction<T, T, T> {
+	public T apply(T t, T t);
+}
+
+
+Comparator<String> comp = (string s1, string s2) -> s.compareTo(s2);
+
+can be
+Comparator<String> comp = ( s1, s2) -> s.compareTo(s2);
+
+Compiler will know deduce the type of s1 and s2.
+
+
+Method Reference:
+another way of writing lamda exptression,
+Consumer<String> c = s -> System.out.println(s);
+
+Consumer<String> c = System.out::prinln;
+
+:: new type of syntax to write lamda expression.
+
+Comparator<Integer> c = (i1, i2) -> Integer.compare(i1, i2);
+Comparator<Integer> c = Integer::compare
+
+
+List<Ingeger> li =new ArraysList<>();
+li.forEach(system.out:: println);
+
+method referencing How we can do check again. see method referencing video
+
+Withod breaking existin collection frwamework how we can add method iterable interface.
+
+Iterable {
+	public void foreach();
+}
+
+thats why java8 allow default method in interface so that no need to refacor child class which has implemented iterator interface.
+and alos now java8 allow static method in interface.
+
+Iterable {
+	defautl void foreach(consumeer<E> c) {
+		for(E e: this) {
+			e.accept();
+		}
+		
+	}
+}
+
+
+
+Exampe of new pattern.
+
+Precicate<String> p1 = s -> s.length > 20;
+Precicate<String> p = p1.and(p2); inside the and method it uses && operator 
+
+IsEqual on practice need to check.
+Consuemer<String> c1 = Sytem.out::println
+Consuemer<String> 2= result::add
+
+List<String> l1;
+List<String> l2;
+string.forEach(c1.and(c2))
+
+

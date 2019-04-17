@@ -1,0 +1,48 @@
+OpenClosed Principle
+
+We have give bonus to specific employee.
+Contract employee
+Each emply will have their own method of not giving bonus.
+
+
+Whenver you see instanceof start thinking about design.
+https://www.youtube.com/watch?v=BLcnGmsZ5EE&t=97s
+
+in this in starting HospitalManagement has all the type of work
+
+and on the instance type we were calll the work for them.
+
+How we can improve that design.
+
+Idealy work functinality should be with employee class.
+
+so all the works method goes in respecitve class.
+
+in employee class we create one abtract method
+performDuties
+
+in Nurse class we will create
+
+performDuties() {
+	this.checkVitals()
+	this.cleanFloor();
+	//etch other works of nurse.
+}
+
+and from HospitalManagement 
+
+class HospitalManagement {
+	public void callUpon(Employee e) {
+		e.performDuties();
+	}
+}
+
+class EmergencyRoomProcess {
+	psvm() {
+		Doctor d = new Doctor();
+		HospitalManagement hm = new HospitalManagement();
+		
+		hm.callUpon(d);
+		hm.callUpon(n); // Also using stategy design pattern.
+	}
+}

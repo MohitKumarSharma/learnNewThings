@@ -1,0 +1,42 @@
+https://www.youtube.com/watch?v=P8Xa2BitN3I
+
+one dp problem 1 + 2
+one graph problem 1 + 2
+one design  pattern 1
+one threading question 1 
+one system design question 1h
+
+
+Overlapping subproblem: If a some of the subproblem are same, in that once the subproblem is solved we will save and use when required next.
+Optimal Subtructure: if a given problem solution can be solved by using subproblem's optimal solution.
+
+First try to break the problem in to subproblem. see how we can break it.
+
+See the what could be minimal problem, may base case. write solutino for that 
+generaly that solution is base using which generally have solution like return 1 or return 0.
+See in that direction.
+
+Complexity of dp in generally exponetial generally if a tree it 2^n. as binary tree 
+
+See about the complexity of dp.
+
+famous
+LCS done
+Coin Change done
+Rod Cutting half done
+Fibonacci done
+Knapsack trying
+
+
+Start work on Graph
+BFS
+DFS
+Other some famous algorithimm
+
+achieve medium level algorithimm expert.
+
+base case is very important . 
+which depends on varying input variable like amount or length index or generally we have to return 0 or 1
+
+As knpasack is dynamic programming problem but fractional Knapsack is greedy problem which is not that much just need sorting fractional 
+and looping over see full item with highect could come and then last item's some fraction part comes.

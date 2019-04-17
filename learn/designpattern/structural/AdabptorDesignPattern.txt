@@ -1,0 +1,16 @@
+Adaptor Design pattern:
+Mix two different interface.
+to use same functionality.
+
+It is used to combine two incompatible interface and giving kind of same function with more reusable
+Adapter pattern works as a bridge between two incompatible interfaces. This type of design pattern comes under structural pattern as this pattern combines the capability of two independent interfaces.
+
+A single class which is responsible of two independent or incompatible objects/interfaces.
+
+A real life example card reader/adapter which is used to help laptop to read data from memory card.
+
+
+Interfaces may be incompatible, but the inner functionality should match the requirement.
+
+The adapter pattern is often used to make existing classes work with others without modifying their source code.
+Adapter patterns use a single class (the adapter class) to join functionalities of independent or incompatible interfaces/classes.

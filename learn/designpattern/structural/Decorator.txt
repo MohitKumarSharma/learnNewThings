@@ -1,0 +1,75 @@
+https://www.geeksforgeeks.org/decorator-pattern/
+https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm
+
+Check about multiple interface with reference something
+
+Decorator pattern which provides additional functionality without chaning existing class. means provides wrapper on top of existing class.
+
+In this decorator class extends the Orginalclass which has to be wrapped or needed functinali
+And add the functinality.
+
+Decorator is altenative to the subclass.  subclass/extends add the behaviour at compile time. while decorator change the behaviour at runtime of indidual object.
+means you take individual object if you need that particular functinality on this object, juest pass in the constructor and create instance.
+
+
+Decorator Design Pattern:
+
+What we do in this
+We have main abstract class like pizza.
+mainy subclass peppy panner etch
+
+Now we want to add the functinality to toping
+one way is to add this in the supper class check has or not hass
+
+but when any topping comes this existing class will need to change. which breaks the rule sra
+
+We can have decorator  like pizzaDecorator
+Which will have always class level variable as pizza and also it will extends the pizza class also.
+
+so in child class of pizzaDecorator we will implement the extra functionality.
+
+as shown in example
+What i can do
+
+A class with 
+abstract class Pizza {
+	int cost;
+	String description;
+	
+	public int getCost();
+}
+
+class PeppyPanerr extends Pizza {
+	public int getCost();
+}
+
+class ToppingInterface extends PeppyPaneer {
+	
+}
+
+class jalepeno implements ToppingInterface{
+	int cost;
+	String material;
+	Pizza pizza;
+	
+	Jalepeno(Pizza pizza) {
+		this.pizza = pizza;
+	}
+	
+	public int getCost() {
+		return this.pizza.getCost() + 50;
+	}
+}
+
+public customer {
+	psvm() {
+		// Create Peppypaner
+		Pizza p1 = new PeppyPaneer();
+		
+		// Adding toping jalepeno
+		p1 = new Jalepeno(p1);
+		
+		Syso(p1.getCost());
+		
+	}
+}

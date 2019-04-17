@@ -1,0 +1,27 @@
+Dockers: is the compute program that performs os level virtualisation means like each process has own os/kernel.
+https://www.docker.com/resources/what-container
+
+EAch process is runs in container 
+
+It is used to run software packages called containers. container is isolated from each otther have all ther required dependency like jar etch.
+Can communicate through proper channel. all container are run by single os kernel and thus more light weithed that vm.
+
+Container/software packages are created from docker images.
+
+How to create and install docker images.
+see those also.
+
+Software: software that handle docker container and handle continer and also listen for docker engine api
+
+Object: entities that are used to assemble docker
+like image/container/service
+Registtru; repository for image
+
+Docker Compose: used to define multi contaner docker application
+
+In VM Hierarchy would be.
+
+See how to use docker.
+Lets start using docker.
+
+in morning we can start install docker and start using this.

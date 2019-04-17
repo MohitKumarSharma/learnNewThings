@@ -1,0 +1,18 @@
+immutable class
+
+Declare the class as final. means no child class of this class. means not extend .
+
+final key word is used to make that variable final means it value can not be changed, if reference is final it can not reassigned but reference hodl the object or array it state can be changed
+
+No setter.
+
+
+Make all fields private so that direct access is not allowed.
+Make all mutable field final, so its value can be assigned once. means whenver you change every time new object gets creates so beyond the class if you try to change the
+class its new object.
+
+Initialize all the fields via a constructor performing deep copy. means after inside the consturcut will create copy and then assing ot class varibleed
+getter will return cloned object.
+all private final  field.
+
+Check can we change the final to normal in child class see it.

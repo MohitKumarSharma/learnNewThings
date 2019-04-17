@@ -1,0 +1,29 @@
+level order traversal: use queue
+
+Another solutin which without queue is also good if you see logics
+find max heights.
+
+and the on loop on heigt
+for (int i = 1; i <= height; i++) {
+printOrderTraver(root, height);
+}
+
+if height pass 4 
+then from root to to go one left on each level will try all 2^4 cases will print
+
+ void printGivenLevel (Node root ,int level) 
+    { 
+        if (root == null) 
+            return; 
+        if (level == 1) 
+            System.out.print(root.data + " "); 
+        else if (level > 1) 
+        { 
+            printGivenLevel(root.left, level-1); 
+            printGivenLevel(root.right, level-1); 
+        } 
+    } 
+      
+
+inorder preoder postorder : use recursion to find out.
+and stack for without recursion.

@@ -1,0 +1,43 @@
+Creational Pattern:
+1. Factory Method
+2. Abstract Factory
+3. Builder
+4. Singleton
+
+Structural Pattern:
+1. Adapter
+2. Composite
+3. Bridge
+4. Decorator
+
+Behavioural Pattern:
+1. Command Pattern
+2. State Pattern
+3. Strategy Pattern
+4. Template method
+5. Chain of responsibility
+6. Null Object
+7. Visitor 
+
+
+
+Todays;
+Decorator 1 done
+Liskov princile refactoring 1 done
+
+Threading example: 1
+
+
+
+System design question: 1
+
+
+Read with refactoring, how we can refactor the code.
+with example.
+
+also read the book of refactoring
+
+Singleton: 1 h
+Factory
+Threading
+

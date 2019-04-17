@@ -1,0 +1,8 @@
+StructuralDesignPattern: 
+
+These designPattern;
+It is for how classes and object can be composed, to form larger data structures.
+
+How classes should be inherit from each other and how they are composed from other classes.
+
+Flexible interconnecting module which can work in  a larger systems.

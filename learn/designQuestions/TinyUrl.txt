@@ -1,0 +1,12 @@
+API
+Application Layer
+Presentation Layer
+https://www.youtube.com/watch?v=fMZMm_0ZhK4
+https://www.geeksforgeeks.org/how-to-design-a-tiny-url-or-url-shortener/
+
+Zookeeper approcach
+to divide range of url. give next avallable range
+
+read about database sharding
+
+Object 

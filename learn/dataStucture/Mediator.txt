@@ -1,0 +1,65 @@
+Read about externalize.
+
+loose coupleing
+
+WellDefined comlex object.
+
+Example Java.util.timer
+or reflect method class.
+
+
+Interface based
+Concrete Class
+Minimize inheritance
+
+
+Light hallLight = new HallLight();
+Light bedroomLight = new Light();
+Mediator med = new Mediator();
+med.register(hallLight);
+med.register(bedroomLight);
+
+Command tunrnAllCommand = new Turnallcommand(med);
+
+Switch switch = new Switch();
+
+switch.storeAndExecute(tunrnAllCommand);
+
+Mediator {
+	List<LIght> ll;
+	
+	public void register(Light light) {
+		this.ll.add(light);
+	}
+	
+	public void turnOnLight() {
+		for(Light light: ll) {
+			if (light.isOff() {
+				light.toggle();
+			}
+		}
+	}
+}
+
+
+Command {
+	execute();
+}
+
+Turnallcommand {
+	Mediator med;
+	
+	OnCommand(mediator med) {
+		this.med = med;
+	}
+	
+	public void execute() {
+			this.med.turnOnLight();
+	}
+}
+
+
+Loose coupleing
+Simplefied version.
+
+Medidator know about all collegue wchi does not about each other like lights object.

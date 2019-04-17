@@ -1,0 +1,9 @@
+https://techiethoughtss.wordpress.com/2016/12/20/refactoring-to-liskov-substitution-principle/
+
+
+As in this class its We should not use isntance of and then specific to that,
+means outside the class means reference should be handle seamlessly without knowing that what subclass reference it is holding.
+
+On ths basis of type give the refernce of that class.
+
+Refund method should also set that status of refund whether successuly form indidual type of payment type.

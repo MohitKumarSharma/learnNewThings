@@ -1,0 +1,7 @@
+ConcurrentHashMap
+It does not maintain seperate copy for iteration like copyOnwriteList.
+
+The iterators returned by ConcurrentHashMap is weakly consistent.
+
+atomic operation
+

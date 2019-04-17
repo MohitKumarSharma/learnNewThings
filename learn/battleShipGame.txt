@@ -1,0 +1,89 @@
+BattleArea:
+	Width
+	Height
+	
+	isInside(BattleShip _ship) { 
+	
+	}
+	
+	isInside(location) {
+	}
+}
+
+BattleShip:
+	Width
+	Height
+	Cordinate
+
+BattleShipTypeP
+	1 hit down
+	Cordinate
+	
+	isHit(cellAddre) {
+		if (cellAddre is inside) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	isFullyDestroyed() {
+	}
+
+BattleShipTypeQ
+	2 hit per cell
+	Cordinate
+	
+
+BattleShips // We may use composite.
+	List<BattleShip>
+	
+	isHit() {
+	}
+	
+	isFullyDestroyed
+
+
+
+
+Player -> BattleShips
+Queue<TargetLocations>
+
+player.fire(q.front());
+
+fire(data) {
+	EventManager.publish("FiredMissile", data);
+}
+
+fireMissle (cell address) {
+	if (hit) {
+		//	fire event to fire again its still your turn.
+		// if miss //now you may fire.
+	}
+}
+
+TargetLocations: 
+
+EventManager data:
+
+
+Client
+read/or parse the input.
+BattleArea
+
+
+Create player
+BattleShips
+BattleShip p1, p2;
+Player p1.setBattleShips(bss);
+p2,setBattleShips(bss);
+
+
+Write valiadator on each inputs.
+before procedding 
+
+Validate battleShip
+Validate the targetLocation are they inside.
+
+We may validate these things.
+

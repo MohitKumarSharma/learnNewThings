@@ -1,0 +1,89 @@
+Encapusalte request as an object
+object oriented callback
+decouple sender from processor.
+oftern used undo the functinality.
+
+Object per command example 
+Command onCommand = new OnCommand(light);
+
+Command interaface always with execute method, in that business logice would be there correspnding to command
+// run method in the tread is acutally execute method of the this desing pattern
+
+Invoker is switch on which command is pass. and on invoker we call storeAndExecute which inside call the command execute method.
+switch.storeAndExecute(onCommand);
+t1.start() /invoker
+
+Receiver is light on which atually operation is going to performed.
+
+entityr
+
+Command Concreate Command
+Invoker
+Receiver
+
+Example 
+Runnalbe
+Swing.action.
+
+//Receiver 
+Light light = new Light();
+
+// Invoker
+Switch switch = new Switch();
+
+// Concreate Command
+Command onCommand = new OnCommand(light);
+
+// Invoking
+switch.storeAndExecute(onCommand);
+
+
+Command allOff = new Alloffcommand(List<Light>);
+
+
+Command {
+	execute();
+}
+
+OnCommand {
+	Light light;
+	
+	OnCommand() {
+		this.light = light;
+	}
+	
+	public void execute() {
+			this.light.on();
+	}
+}
+
+AllCommand {
+	List<Light> lights;
+	
+	OnCommand() {
+		this.lights = lights;
+	}
+	
+	public void execute() {
+		for (Light light: lights) 
+			this.light.off();
+	}
+}
+
+class Light {
+	boolean isOn = false;
+	
+	on()
+	off();
+	toggle();
+}
+
+class Switch {
+	public void storeAndExecute(Command onCommand) {
+		onCommand.execute();
+	}
+}
+
+Dependency on other patterns
+Multiple commands
+make use of memento

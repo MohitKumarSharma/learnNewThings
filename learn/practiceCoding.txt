@@ -1,0 +1,29 @@
+read Coffeemaker example: 1h
+
+read about hashcode and equal: 30m done.
+
+read about some datastructure related tree and graph: 1h done
+
+Read about mediator design pattern: 30m
+
+
+TestNg document discussion: 3h
+
+then read about design, how you can design.
+
+Read about java 8 feature new ones. Do it  36 minutes.
+
+
+Matrix multiplication using dp
+
+If two objects are equal according to the equals(Object) method, then calling the hashcode() method on each of the two objects must produce the same integer result.
+
+HashCode returns integer representation of memory address. by default this method returns a random integer that is unique for each instance.
+
+equals(Object obj): a method provided by java.lang.Object that indicates whether some other object passed as an argument is "equal to" the current instance. The default implementation provided by the JDK is based on memory location — two objects are equal if and only if they are stored in the same memory address.
+
+
+Check aobut by implementing hashcode equal by overriding and test.
+
+The Queues which are available in java.util package are Unbounded Queues
+The Queues which are available in java.util.concurrent package are the Bounded Queues.
