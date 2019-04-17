@@ -1,0 +1,76 @@
+Routing,
+BehaviourSubject
+scheduler
+DynamicContainer
+ChangeDetectionstratey.
+
+map
+
+
+Subject is genrally like custom calling method 
+next, complete of obeservalbe. 
+
+BehaviourSubject is when we want to start with some intial value or default value.
+
+var clicked = Rxjs.BehaviourSubject("Not Clciked");
+then automatically behavious subject will be called.
+clied.next("mohit");
+
+
+snapshot: currentSnapshot: It has all the information
+related to route.
+paramMap is just map which has information.
+
+Will read about navigation later.
+Router, activateRoute
+
+strategy: PreloadingStrategy
+
+https://angular.io/docs/ts/latest/guide/router.html
+ Adds router directives and providers.
+
+ * RouterModule can be imported multiple times: once per lazily-loaded bundle.
+ * Since the router deals with a global shared resource--location, we cannot have
+ * more than one router service active.
+ *
+ * That is why there are two ways to create the module: `RouterModule.forRoot` and
+ * `RouterModule.forChild`.
+
+ * * `forRoot` creates a module that contains all the directives, the given routes, and the router
+ *   service itself.
+ * * `forChild` creates a module that contains all the directives and the given routes, but does not
+ *   include the router service.
+ *
+ * When registered at the root, the module should be used as follows
+ *
+ * ```
+ * @NgModule({
+ *   imports: [RouterModule.forRoot(ROUTES)]
+ * })
+ * class MyNgModule {}
+ * ```
+ *
+ * For submodules and lazy loaded submodules the module should be used as follows:
+ *
+
+ https://dqqokyygkal.angular.stackblitz.io/admin(popup:compose)
+ 
+ So when we create module we need to declare each and every component.
+ Will have to check how we are going to create component, dynamic compoennt
+ because i have studied both in different situation.
+ 
+ each component must be part of one module means declared in one modules.
+ 
+ so generally in
+ const routes: Routes = [
+	{path: '', HomeCmp},
+	{path: 'mohit', MohitCmp},
+	{path: 'lzy', loadChildern: 'pathToModuleFile#ClssName', canLoad: 'AuthGuard'}
+ ];
+ 
+ 
+ const routingComponentlist =[all the components which is going to used for routs array]
+ 
+ 
+ *ngFor let hero of heroes
+ <a routerLink="detail/{{hero.id}}"></a>

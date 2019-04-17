@@ -1,1 +1,41 @@
 Nodejs is js which is used at server side.
+
+node js use asynchronous programing.
+
+A common task to the webserver is to open a file read content and sent it to server.
+that these things generally done by node js
+
+here is how php, asp etc.
+sends the tasks to computer file system
+Waits while file system opens and read the file.
+returns the content to client
+ready to handle the next request.
+
+Here how node js handles.
+Sends the task to the computer's file system.
+Ready to handle the next request.
+When the file system has opened and read the file, the server returns the content to the client.
+
+Node js eliminates the waiting to open file system and returen, can continue to open new request.
+
+Node jsnis single threade non blocking asysnchronous programming which is very memory efficient.
+
+What Can Node.js Do?
+Node.js can generate dynamic page content
+Node.js can create, open, read, write, delete, and close files on the server
+Node.js can collect form data
+Node.js can add, delete, modify data in your database
+
+
+What is node js:
+Node js file contains certain task which will be execute on certain events,
+A typical evebt is when someone access the port on server, Node js must beiitiated on server 
+before before having on effect.
+
+In node js evry file in module which consists function varialbe roeprty etc.
+http is module, it you want to incule use require function like this
+var http = require("http");
+
+Its just another server side technology, in this case js is used . means language is js.
+that it. It has some simple design other server side technnologeis.
+thats it.
