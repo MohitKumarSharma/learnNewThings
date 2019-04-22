@@ -1,0 +1,21 @@
+There are two way to run this project
+
+1 ) There is a "Client" class which has main method which accept command line argument. In that you must pass the input file path which consist game inputs.
+
+You may refer sample input file as named BattleGameInput.txt.
+
+
+2) There is a "Client1" class which has main method. This class accept all the input through
+command line as described in puzzle.
+
+Example. In first line it will ask for
+Enter area boundary:
+5 E
+Enter number of battle ship for players
+2
+...
+...
+
+In this one by one it will ask for require input you just enter the input.
+
+Once the all inut feeded to the program battle will start.
