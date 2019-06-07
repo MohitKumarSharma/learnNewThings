@@ -1,0 +1,90 @@
+validators:
+Read about promises.
+
+https://stackblitz.com/angular/jevnbxyvjyk?file=src%2Fapp%2Fshared%2Falter-ego.directive.ts
+https://angular.io/guide/form-validation
+
+this.loginForm = new FormGroup {
+	email: new formControl(null, [Validators.required, Validators.maxLength(10)]);
+};
+
+On the template we can do hide or show message.
+essentially formControl reading we determined whether form has error or not or usinng has error method
+We can alo check form has touched or not
+
+CustomValidation:
+In angular custom valitation is as much writing a new function.
+
+In angular validators function take one input parameter
+returns an object of key value pair
+
+ageRangeValidation
+
+function ageRangeValidation(formControl) : {key: value}: null
+
+if fails 
+key: name of error and value is true.
+otherwise error false.
+
+value:
+
+function ageRangeValidator(control: AbstractControl): { [key: string]: boolean } | null {
+    if (control.value !== undefined && (isNaN(control.value) || control.value < 18 || control.value > 45)) {
+        return { 'ageRange': true };
+    }
+    return null;
+}
+
+this.loginForm = new FormGroup {
+	email: new formControl(null, [Validators.required, Validators.maxLength(10), ageRangeValidator]);
+};
+
+Issue with this there is no input parameters oever here.
+To do we have to use factory function means function which return function
+
+
+functin ageRangeValidatorFn(const max, const min) {
+	return function (control: AbstractControl) {
+		 if (control.value !== undefined && (isNaN(control.value) || control.value < min || control.value > max)) {
+			return { 'ageRange': true };
+		}
+		return null;
+	}
+}
+
+
+this.loginForm = new FormGroup {
+	email: new formControl(null, [Validators.required, Validators.maxLength(10), ageRangeValidatorFn(10, 20)]);
+};
+
+To show error in UI 
+we have to create div and error divs our self on the basis of error return by the validators.
+
+<div *ngIf="name.errors.ageRange">
+	Age must be between {{min}} to {{max}};
+</div>
+
+Some time it define  formcontrol setter and getter on form. see when it is required.
+
+
+For CSS purpose.
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+In case of two form control vaidation depens on each otherwise
+const heroForm = new FormGroup({
+  'name': new FormControl(),
+  'alterEgo': new FormControl(),
+  'power': new FormControl()
+}, { validators: identityRevealedValidator });
+
+pass the validatour as second argument of fromGroup
+It is like attaching to the validation of forms.
+
+
+To see asynch validator read lateer could not understand

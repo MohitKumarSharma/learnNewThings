@@ -1,0 +1,23 @@
+customTheme
+
+check about mixixn and all that stuff
+and scss
+
+Unable to open '_theming.scss': File not found (file:///d:/NEWUIDevelopment/FabricCheckout/fabric/megha/app/web/ng-ui/src/styles/~@angular/material/_theming.scss).
+
+We can include mixins in css file
+.
+
+@mixins border-radius($radius) {
+	border-radius: $radius;
+}
+
+.message {
+	border: 5px;
+}
+
+.success {
+	@extend .message
+}
+
+@include border-radius(5px)

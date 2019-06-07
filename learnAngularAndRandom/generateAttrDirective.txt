@@ -1,0 +1,14 @@
+ng g directive chidden
+
+it create the stubs.
+
+int that we cant take referrnece of binding element
+private el : ElementRef
+
+@input()
+cHidden: boolean
+to read the value of directive
+
+inculde it into core.module
+
+use it like any attribute directive.

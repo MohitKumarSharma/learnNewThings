@@ -1,0 +1,52 @@
+Flexibility over telescoping constructors
+
+typically written with static inner class 
+calls appropiate constructors
+negates need for exposed constructors.
+
+
+Demonstrate exposed contructors
+demonstrate telescoping constructors
+create builder
+
+telescoping constructors is the approach in whcih constructors call less aargement constructors from inside.
+
+like eample
+
+class LifeOrderTele {
+	String bread;
+	string wrapper;
+	string salad;
+	
+	LifeOrderTele(String bread, String wrapper) {
+		this.bread = bread;
+		this.wrapper = wrapper;
+	}
+	
+	LifeOrderTele(String bread, String wrapper, String salad) {
+		this(bread, wrapper); // Telescoping constructors
+		this.salad = salad;
+	}
+	
+	build
+}
+
+Builder.bread("wheat").dressing("wrapper");
+kind of 
+Object created with builder pattern are typically desinged to be immutable
+implemented using static inner class
+
+Handle complex constructors
+No interface required
+can be seperated class
+
+Builder Design  pattern. We can give presentation.
+
+Give presentation on builder pattern. 
+
+Example
+
+Builder desinged patter
+
+String bulder maintans char array in which new string gets appended, till appended appended, 
+once we call toString it converts that char array to string and returns.

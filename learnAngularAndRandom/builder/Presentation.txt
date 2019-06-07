@@ -1,0 +1,61 @@
+What is design pattern
+
+Type of design pattern
+Creational desing pattern
+Structural
+Behavioural
+
+Builder Design Pattern
+Problem is solves:
+Complext agument constructor.
+
+Generally we see that some classes have a list of argument, in that some times some argument are optional. we dont know
+which one.
+
+
+Typically it is used when we want to create immutable object. once it is create we dont want to change.
+Immutable Object
+
+Problem we are solving using this
+Complex arument cosntructor 
+Immutable Object.
+
+
+
+
+Give example StringBuilder
+Added in 1.5
+earlier we used to 
+each time concatentation of string, creating object each time with new string.
+
+Now we have StringBuilder which is used to build StringBuilder
+
+There are muliple method/flexibility it provides, to build string
+like
+append with diffrent type of argument
+
+with some arumented constructor.
+
+when you are done with feeding your requirement to stringBulder call
+
+toString() method on stringBuilder
+return new String(value, 0, count);
+which is like build will return a string.
+
+
+Using setter 
+Drawaback
+
+It can't be immutable as after creating object we use setters.
+Issue with it does not have contract what is lunch order is.
+means
+Meal meal = new Meal();
+event without calling lunch order it will work.
+
+
+Using constructor
+I can have immutable object,
+but issue with this is How you can feed the constructor subset of fields.
+if does not daal, or veg , in that a lot of constructor is required.
+
+Now next we come to the next which is best of both above approach.

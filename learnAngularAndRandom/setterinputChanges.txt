@@ -1,0 +1,54 @@
+@Input()
+isLoading: boolean;
+
+https://medium.com/@bharat.tiwari/intercept-input-property-change-in-angular-690567eb63ec
+
+It is one time, but when value changes, then how we should do,
+
+there are two common way to do this
+
+one is setter and another ngOnchange life cycle hook
+
+@Input() item;
+  @Input() notifyItemProcessed: () => void;  // Yes we can pass method refrence from parent to child.
+  
+  
+  <item-details *ngIf="itemSelected"
+          [item]="itemSelected" 
+          [notifyItemProcessed]="processOrderItems" ></item-details> // Here passing method reference.
+  
+   
+   private _item; // private property _item
+
+  // use getter setter to define the property
+  get item(): any { 
+    return this._item;
+  }
+  
+  @Input()
+  set item(val: any) {
+    console.log('previous item = ', this._item);
+    console.log('currently selected item=', val);
+    this._item = val;
+    this._item.status = 'In Process';
+  }
+  
+  what ever the setter name will be used as for properting binding or
+  other wise we need to pass the 
+  @Input('item')
+  // This way we can pass.
+  
+  ngOnchChanges fire when any of the input value changes
+  it is lifecycle method.
+  
+  ngOnchanges(changes: SimpleChanges) {
+	itemsChange: simpleChange = changes.item;
+	
+	itemChange.previousValue
+	itemChange.currentValue // We receive both in ngOnchange
+  }
+  
+  _employee // underscore represent that it is private property
+  
+  set employee() {}
+  get employee() // we need to mandatory to have when we are using employee name in templagte

@@ -1,0 +1,37 @@
+https://www.youtube.com/watch?v=-h_zSpjL4TY
+
+Jit vs aot compiler.
+vendor contains the compler
+
+npm install -g source-map-explorer
+install the package to see the visualization
+node_module\.bin\source-map-explorer dist\\vendor.js
+
+See later
+
+ng serve 
+we by default get jit compilation
+
+ng serve --aot true
+ng serve --prod
+
+With jit, browser need to download angular compilation also.
+but aot compiler this is not needed.
+
+With Jit, to compile the script first time user has to wait.
+but aot as files are precompiled, no need to wait
+
+
+With jit, template errors are captured at runtime at browser while
+aot , these are captured at build time itself
+
+By default both uses jit
+ng build
+ng serve
+
+we can enable by config option
+
+ng serve --aot
+
+ng serve --prod
+default compiler for productin is aot

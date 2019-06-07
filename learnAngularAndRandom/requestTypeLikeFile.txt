@@ -1,0 +1,26 @@
+https://www.illucit.com/en/angular/angular-5-httpclient-file-download-with-authentication/
+
+application/encoded
+
+or use
+
+public async downloadResource(id: string): Promise<Blob> {
+	const file =  await this.http.get<Blob>(
+	  this.API_URL + this.ZIP_URL + '/' + id,
+		{responseType: 'blob' as 'json'}).toPromise();
+	return file;
+}
+
+public async downloadZip(): Promise<void> {
+  const blob = await this.service.downloadResource(this.id);
+  const url = window.URL.createObjectURL(blob);
+  
+  const link = this.downloadZipLink.nativeElement;
+  link.href = url;
+  link.download = 'archive.zip';
+  link.click();
+ 
+  window.URL.revokeObjectURL(url);
+ } 
+ 
+ Use that for link for better reference

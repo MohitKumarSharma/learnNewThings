@@ -1,0 +1,45 @@
+https://www.youtube.com/watch?v=VUuGa1QFmcA
+git show 8100(commit id)
+
+git revert 81000
+it does commit revert commit of above id
+
+git reset --hard 8120
+It move the pointer to this commit id. and no track after that. and remove all the local commit if they are
+
+git checkout .
+discarding changes in all the file in working area
+
+git checkout file
+discarding changes for particular file
+
+to unstage particular file
+git reset HEAD fileName
+
+To unstage all file
+git reset HEAD *
+
+
+git reset removes the commit from history
+git reset with multiple option
+git reset HEAD~1
+go back to one commit means reset one commit. and show changes locally
+
+removing specific commit is not possible through reset command
+
+git reset HEAD~3 
+removes recent three commits from history
+
+
+git reset --soft commitId
+
+--soft this commit will be removed from history and changes are kept in staging area.
+--mixed this commit will be removed from history and changes are kept in working area.
+--hard this commit will be removed from history and changes are not preserved to this associated commt.
+
+git reset works locally while revert works on remotely
+
+git revert commitId
+IT does not remove the commit from the history, it commit new commit to revert back changes
+
+https://www.youtube.com/watch?v=VUuGa1QFmcA

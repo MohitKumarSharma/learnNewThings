@@ -1,0 +1,75 @@
+ngFor Attribute.
+
+https://blog.angular-university.io/angular-2-ngfor/
+
+Variable in the scope like event odd first last index etc
+
+How far ngfor can track item why it is important for performance.
+
+How and when t use track by
+
+Why it not only for arrays
+
+const heroes[] = [{name: "Mohit"}, {name: "sharma"}]
+
+<tr *ngFor="let hero of heroes; let isFirst = first; let isEven= event;">
+<td>
+{hero.name}
+</td>
+</tr>
+
+<tr *ngFor="let hero of heroes; let i = index; trackBy: hero?id">
+<tr *ngFor="let hero of heroes; let i = index; trackBy: track(hero)">
+
+For tracking id to be uniquely
+
+instead of we can have method like
+
+track(hero):string {
+	return hero? hero.id: undefined;
+}
+
+Check about configuration element.
+
+@ContentChildren(Hero)
+heroes: QueryList<Hero>;
+
+Now we can pass directly this heros element to ngFor.
+
+
+How does ngFor work when we add or remove elements from the list?
+It just updates the list according. means if some of the element is deleted will delete or rquired ot update will update
+
+gFor will try to avoid to constantly create and destroy the DOM elements of the list, as this is an expensive operation. Also, when we pass to ngFor a new list, this does not mean that the whole list will be re-built, meaning all the DOM re-created.
+
+Many of the existing DOM elements will be reused and only some values inside them will be overwritten, and the decision is taken for each element in the list separately.
+
+
+Why can this be important for performance?
+By defualt it uses object idenetiy. comparing each object could be performance issue so we can configured tracking on other property like id
+
+
+When to use trackBy ?
+The use of trackBy it's a performance optimization and is usually not needed by default, it's in principle only needed if running into performance issues.
+
+ngfor need any iterable object not jsut array
+
+
+<heroes>
+    <hero id="1" name="Superman"></hero>
+    <hero id="2" name="Batman"></hero>
+    <hero id="3" name="Batgirl"></hero>
+    <hero id="3" name="Robin"></hero>
+    <hero id="4" name="Flash"></hero>
+    <hero id="5" name="Green Lantern"></hero>
+</heroes>
+
+
+@ContentChildren(Hero) // Use this in heroes component to get the hero conf element
+heroes: QueryList<Hero>; // this(QueryList) is iterable.
+
+We can create configuration element like hero using @Directive decorator.
+Using hero class
+
+@ContentChildren(Hero)
+heroes: QueryList<Hero>;

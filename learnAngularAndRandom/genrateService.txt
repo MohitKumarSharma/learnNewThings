@@ -1,0 +1,19 @@
+read about structural directive later.
+
+ng generate service recorde
+
+which is used to send and hold the received data.
+
+
+dependency injection will do later
+
+Angular distinguishes components from services to increase modularity and reusability. By separating a component's view-related functionality from other kinds of processing, you can make your component classes lean and efficient.
+
+tomorrow we write a service which holds the data
+eache request is going to be in this service snmpdata service
+evertything is going to be in this.
+
+for init servcie we are going to initialize the data using the value.
+will see.
+
+apply css

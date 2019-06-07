@@ -1,0 +1,110 @@
+Structural directive is responsible for dom manipulation
+https://www.youtube.com/watch?v=rr1MIDY0FUg
+
+ngIf ngfor ngSwith
+These three are structral directive.
+
+read about ng-template
+
+
+ng-template is used to create template which can be inserted in html ng-container or anywhere in application
+
+<ng-template #defaultTabsHeader let-tabs="tabs"> 
+	<ul class="tab-panel-buttons" *ngIf="tabs">
+		<li [ngClass]={selected: tab.selected} *ngFor="let tab of tabs">tab.title</li>
+	</ul>
+
+</ng-template>
+
+<ng-container *ngTemplateOutlit="defaultTabsHeader; context: tabsContext"><ng-container>
+
+CONST tabsContext = {
+	tabs: {};
+}
+
+#defaultTabsHeader It is called reference will study later. This is very important because using this reference we nca that class methos.
+
+
+We can pass the template reference to class and we can use that refence in out template now examplate
+<ng-container *ngTemplateOutlit="headerTemplate > headerTemplate: defaultTabsHeader; context: tabsContext"><ng-container>
+
+<ng-container. does not render any thing in html it can be used to take decisons.
+
+
+create structral directive.
+
+angular is desugaring direcitve.
+
+https://angular-university.io/lesson/advanced-angularviewcontainerref
+https://angular-university.io/lesson/advanced-angularviewcontainerref
+
+https://www.youtube.com/watch?v=WJXgXZ-reZ4
+
+We will see
+
+<div *ngIf="true"> Mohit</div>
+
+It is equivalient to  abouve one is converted into
+
+<ng-template [ngIf]="true">
+	<div>Mohit</div>
+</ng-template>
+
+What is sugaring desugaring
+sugaring is like elgancy of code
+++i or lamba expression which reduces the statement to do the same wokk
+
+desugaring is the process, where codeprocessor finds out whats behind the sugar statement.
+
+The *ngIf directive moved to the <ng-template> element where it became a property binding,[ngIf].
+The rest of the <div>, including its class attribute, moved inside the <ng-template> element.
+
+As we know structral direcitve can only be applied to template.
+
+and iternally after desugainr of structral direcitve it converts into propery binding or attribute direcitve.
+
+read about viewContainerRef.
+
+<au-modal class="au-modal" body="automdaol" *auModalOpenclick="Login"> </au-modal>
+
+<button #Login>Login</button>
+
+<au-modal class="au-modal" body="automdaol" *auModalOpenclick="Login"> </au-modal>
+templateRef: TemplateRef<>;
+viewContainerRef: ViewContainerRef<>;
+
+this can be get from constructor while creating
+
+viewcontainer is the container where one or more view can be attached.
+
+https://www.youtube.com/watch?v=WJXgXZ-reZ4
+
+<ng-template [auModalOpenclick]="Login">
+<au-modal class="au-modal" body="automdaol" > </au-modal>
+ </ng-template>
+ 
+ not create the class like attribute direcitve.
+ 
+ templateRef
+ viewcontainerRef
+ 
+ use
+ 
+ set auModalOpenclick(els) {
+	// Adding events.
+	els.addEventListender();
+ }
+ 
+ micro syntax
+ https://angular.io/guide/structural-directives#microsyntax
+ 
+ Microsyntax it parse template variable or structral direcitve string syntax into attribute on ng-template.
+ 
+ 
+ Template input variable:
+ it is defined using let keyword and scope is the template defined inside.
+  template input variable is a variable whose value you can reference within a single instance of the template.
+  
+  You declare a template reference variable by prefixing the variable name with # (#var). A reference variable refers to its attached element, component or directive. It can be accessed anywhere in the entire template.
+  
+  You can use the ref- prefix alternative to #. This example declares the fax variable as ref-fax instead of #fax.

@@ -1,0 +1,4 @@
+https://yoksel.github.io/flex-cheatsheet/#flex-shrink
+
+this is  the cheatsheet/#flex-shrink which required to be study.
+

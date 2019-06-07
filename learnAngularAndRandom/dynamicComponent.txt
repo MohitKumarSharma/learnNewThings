@@ -1,0 +1,38 @@
+https://www.youtube.com/watch?v=2ZlM985_WE0&list=PLw5h0DiJ-9PC3MfSI4q3c93HizUWaowpE
+https://www.youtube.com/watch?v=2ZlM985_WE0&index=1&list=PLw5h0DiJ-9PC3MfSI4q3c93HizUWaowpE 
+till 16 minutes
+
+
+static component are component which is used inside a template
+known is development time
+hardcoded
+
+if there many type of component like bargraph piegraph etc they all are in tempalte
+it takes time to compile all the compoenent
+
+<div>
+<div *ngIf="type =bargraph"></div>
+<div *ngIf="type =pieaph"></div>
+<div *ngIf="type =agraph"></div>
+<div *ngIf="type =bgraph"></div>
+</div>
+
+dynamic component:
+<div #c></div>
+
+Added in runtime
+load the configuration server
+lazy loaded.
+
+UseCase
+Dashboard
+Popup and modals
+Content Management systems
+plugins
+attach html to third party library
+
+Ask anmol about useFactoru things
+
+InjectionToken: 
+Very good videos
+https://www.youtube.com/watch?v=tA9tuKbg5Yk

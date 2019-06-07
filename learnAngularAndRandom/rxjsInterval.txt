@@ -1,0 +1,12 @@
+let interval = RxJs.Observable.timer(2000, 1000).map(x => x*3)
+
+myObservable.subscribe(x = > console.log(x));
+
+delay is just operatory which works with pipe.
+
+This may help.
+
+read about debout 
+
+
+http://xgrommx.github.io/rx-book/content/observable/observable_instance_methods/buffer.html

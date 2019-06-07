@@ -1,0 +1,58 @@
+https://www.youtube.com/watch?v=rkhH7Nk8mOM
+
+accordian 
+hiding click on headeer
+
+downside strictlly attached to component not reusable
+
+create css style 
+
+.pointerCustor {
+	cursor: pointer
+}
+
+take varialbe
+panelExpanded = true
+;
+
+binded to body and footer of panel div
+
+use ngIf directive to render div or not. It removes the dom element completely if panelexpanded ngif direct false.
+
+instead of remove adding dom complete from dom we can show or hide body and footer of panel
+
+we use 
+[hidden]="isHidden" property binding.
+
+
+difference beween hidden property *ngIf directive
+ngIf directive remove the dome
+while hidden jsut change display: to none means hide and show.
+
+Creating according using ng-content becuase it make generic.
+
+panel
+header ng-content
+body ng-content
+footer ng-content
+
+multi slot content-projection.
+
+(click)="isHidden = !isHidden"
+
+
+after writing generic compnent using ng-content
+we need to pass the data.
+
+for titlw and other realted we use property binding
+
+ng-content place holder we will use class selector
+<ng-content select=".myPanelFooter"></ng-content>
+
+now footer div
+<div class="myPanelFooter" ></div>
+
+We can use any of css selector for content projection
+
+https://www.youtube.com/watch?v=2SJ9Ch8jX3A
+for ng-content.

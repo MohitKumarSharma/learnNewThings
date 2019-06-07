@@ -1,0 +1,98 @@
+https://www.youtube.com/watch?v=Tux1nhBPl_w
+https://rxjs-dev.firebaseapp.com/guide/subject
+
+stream of data/value possible asynchronously.
+basically wrapper around data soruce stream value.
+
+observer responsibility whenever new data come execute the 
+
+
+Observable
+
+--> subscription
+
+Observer
+implements the three method
+next
+error
+complelte
+
+
+How observer will know that which method would be called
+this is contract which 
+
+<button>click me <button>
+var button = docuement.geuerySelector('button');
+
+Rx.observable.fromEvent(button, "click").subscribe(
+	(value) => {
+		consoe.log(value.clientX);	// A function
+	}
+);  	
+
+subsribe takes two type of argument
+either a list of function 
+first function  => next
+second => error
+third => complete
+
+(value) => {}
+(error) => {}
+() => {}
+
+
+or a single object which implements above function.
+
+var observer = {
+	next: function(value) {
+		console.log(value);
+	},
+	error: function(value) {
+		console.log(value);
+	},
+	complete: function() {
+		console.log("complee");
+	},
+};
+
+Once the error comes, observale done
+
+var subscriber = Rx.observable.create(function(obs) {
+	obs.next("ABC");
+	obs.error("bsd")
+	setTimeOut(function(12) {
+		obs.complete();
+	}, 200);
+}).subscribe(observer);
+
+setTimeOut(function() {
+	subscriber,unsubsribe();
+}, 200)
+
+
+A Subject is like an Observable, but can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.
+Subject can have multiple observer.
+
+
+const subject = new Subject<number>();
+ 
+subject.subscribe({
+  next: (v) => console.log(`observerA: ${v}`)
+});
+subject.subscribe({
+  next: (v) => console.log(`observerB: ${v}`)
+});
+ 
+subject.next(1);
+subject.next(2);
+
+Seeing above one it every subject is oberver and observalbe.
+
+read about scheduler
+
+
+Subject: Read about connect and other stuff
+
+read about replay subject.
+
+

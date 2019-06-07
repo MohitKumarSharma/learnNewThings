@@ -1,0 +1,21 @@
+An Operator is a function which creates a new Observable based on the current Observable. This is a pure operation: the previous Observable stays unmodified.
+
+Could not understa ndn
+
+const obeservable = Rx.Observable.from([1, 2, 3, 4]); It returns observable of array
+obeservable.subscribe(_data => {
+	console.log(_data); // 1, 2 , 2
+});
+
+
+The Observable whose values are originally from the input object that was converted.
+Rx.Observable.from
+
+
+var clicks = Rx.Observable.fromEvent(document, 'click');
+clicks.subscribe(x => console.log(x));
+
+obeservable on click
+
+
+read about promises also.

@@ -1,0 +1,12 @@
+for transulustionn it is used
+<ng-content></ng-content>
+
+check about how it mapped with selector like
+
+<ng-content select="[body-content]"></ng-content>
+
+for hiding host service
+
+host: {
+	'[style.display]': 'hidden? "node": ""'
+}

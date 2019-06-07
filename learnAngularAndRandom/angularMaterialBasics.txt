@@ -1,0 +1,13 @@
+Angular Material Basics:
+
+npm install --save @angualar/material @angualar/cdk
+
+npm install --save @angualar/animations
+
+import the default theme in styles.css
+import prebuiltTheme
+
+import that component module 
+and start use them
+
+links to google api for matrial iconfs

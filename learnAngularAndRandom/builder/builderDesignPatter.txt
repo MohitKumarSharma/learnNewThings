@@ -1,0 +1,109 @@
+BuilderDesignpatter: Creational Designpattern.
+
+Purpose of builder designpatter is to seperate the construction  of complex  object from its representation, so same construction process create different representation.
+The process can create different representation.
+
+
+
+Like constuctor have a lot of parameter to create a object.
+in that some of the constuctor arguement could be default.
+
+It simplify the creation of compelx object.  by either providing constuctor on the 
+
+Int that we can have on builder class which will give us default object. and can provide some setter to set the other params on constuctor.
+
+There are multiple way of doing this depends on the requirement;
+https://www.youtube.com/watch?v=k4EkJgY9P4c
+
+
+class Phone {
+	private int phoneNumber;
+}
+
+Phonebuilder {
+	private int phoneNumber;
+	...
+	..
+	
+	public Phonebuilder setPhone(int _phNumber) {
+		this.setPhone(_phNumber);
+		return this; // So that again we can call method of this class.
+	}
+	
+	public Phone getPhone() {
+		return new Phone(this.phoneNumber);
+	}
+	
+}
+
+class Main {
+	psvm() {
+		Phone phone = new Phonebuilder().setPhone(45).setCode(91).getPhone();
+	}
+}
+
+This is the one way there some of the argument of Phone class;
+Another way of doing that;
+
+Director
+Builder
+Product on this basis.
+
+At the end we want to simplify the builderDesignPattern.
+
+https://www.geeksforgeeks.org/builder-design-pattern/
+
+ConcreteBuilder – There may be any number of concrete builder classes inheriting from Builder. These classes contain the functionality to create a particular complex product.
+There could be multiple builder to create multiple to consruct multiple type object.
+
+class Builder {
+	Product p;
+	Builder() {
+		 p = new Product();
+	}
+	
+	public void buildFloor() {
+		this.p.setFloor("ceemented");;
+	}
+	
+	 public void buildBasement()  
+    { 
+        house.setBasement("Ice Bars"); 
+    } 
+	
+	public Product getProduct() {
+		return p;
+	}
+}
+
+class Director {
+	private Builder b;
+	
+	Director(Builder _b) {
+		this.b = _b;
+	}
+	
+	construct() {
+		this.builder.buildfloor();
+		this.builder.buildBasement();
+	}
+	
+	public Product getProduct() {
+		return this.b.getProduct();
+	}
+}
+
+
+class Main{
+	psvm() {
+		Buider b = new Builder();
+		Director d = new Director(b);
+		
+		d.construct(); // construct product
+		
+		Product p = d.getProduct();
+		
+		
+		
+	}
+}

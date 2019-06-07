@@ -1,0 +1,24 @@
+https://coryrylan.com/blog/angular-debugging-tips-and-tricks
+for debugging-tips-and-trick
+
+We can use augaury which is best tool to debug
+
+When we click on component it shows all the dependency of the component.
+
+View Source — a link to the source code of the component.
+Change Detection — displays whether or not Change Detection is in use for the component.
+Object Properties — lists the properties of the component.
+Dependencies - lists the dependencies of the component.
+
+o view the source code of the selected component, click the 'View Source' link. This will bring the Sources tab into focus and display the source code.
+
+https://augury.rangle.io/pages/guides/io-demo.html
+
+Why the formatable state is not showing
+
+Some of the overlay component and dynamic component can not be found
+these information can not be found.
+
+https://augury.rangle.io/pages/guides/contribute.html
+
+It is worth to see.

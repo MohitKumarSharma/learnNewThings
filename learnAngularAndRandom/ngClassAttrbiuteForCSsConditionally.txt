@@ -1,0 +1,10 @@
+ngClass uses an attribute on the state of variable class
+[ngClass] ={
+	bttflex: !rror
+}
+
+[ngClass]="{ 'disabled': isSubmitting,
+             'btn-outline-secondary': !profile.following,
+             'btn-secondary': profile.following }"
+			 
+https://thinkster.io/tutorials/building-real-world-angular-2-apps/ngclass

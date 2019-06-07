@@ -1,0 +1,3 @@
+box-sizing: border-box is used to include margineetc inside box.
+
+[disabled]="protocolList.length === 1"

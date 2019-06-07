@@ -1,0 +1,41 @@
+Navigation and Route
+https://codecraft.tv/courses/angular/routing/navigation/
+https://codecraft.tv/courses/angular/routing/route-configuration/
+
+<a href="./#/search"> Search</a>
+One way to hard code url on href attribuyte of anchor tag
+This is one way to achieve routing
+
+
+
+We need to import the Route, Router module module
+
+<a (click)="goSearch()"> Search</a>
+
+from the package @angular/router
+
+const route = [{
+	path: 'search', component: 'CompoenentName'
+}];
+RouterModule.forRoute(routes, {useHAsh: true})
+
+class HeaderComponent {
+	private router:Router;
+	
+	goSearch() {
+	return this.router.navigate(['search']);
+	// return this.router.navigate(['search', 'foo', 'bar']);
+	
+	
+	}
+	
+}
+
+We can use the routerLink directive to redirect.
+<a [routerLink]="['search']"> Search</a>
+
+check about active class
+
+[routerLinkActive]="['active', 'OtherCss']"
+
+It can be applied above the link tag and on link tag means navigate ink. it automatically check for current and child for to set active route css.

@@ -1,0 +1,100 @@
+Mat tree is used to display tree. like in hdca
+https://material.angular.io/components/tree/overview
+
+
+There are two type of tree.
+Flat Tree:  all dom are same level just css is used to show as tree.
+Nested Tree: Doms are nested
+
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+	<mat-tree-node *matTreeNodeDef="let node" matTreePAdding>
+	<button mat-iconf-disabled></button>
+	{{node.name}}
+	</mat-tree-node>
+	
+	<mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+		<button mat-icon-button matTreeNodeToggle
+				[attr.aria-label]="'toggle ' + node.name">
+		  <mat-icon class="mat-icon-rtl-mirror">
+			{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+		  </mat-icon>
+		</button>
+		{{node.name}}
+  </mat-tree-node>
+</mat-tree>
+
+FlatTreeControl, MatTreeFlatDataSource, MatTreeFlattener
+
+
+Nested Tree:
+Parent node has an outlet to keep all the children nodes.
+
+<ma-tree it deals with rendering of data structure.
+
+TreeControl : it controls expand and collapse state of tree node. User can expand collapse a tree through tree control
+for Nested tree getChidren function may return an observable of children or an arrray to make it recursive work
+
+Toggle: to toggle a node on click
+
+Accessibility:
+Tree's role is tree
+parent node are given "group" while leaf node are given "role"="treeItem"
+
+mat-tree does not manage any focus/keyboard interaction on its own. Users can add desired focus/keyboard interactions in their application.
+
+
+See video on angular material basics.
+
+for tree
+https://www.youtube.com/watch?v=BALaj39rbZE
+
+https://angular-2-training-book.rangle.io/handout/advanced-angular/directives/view_containers_and_embedded_views.html
+
+Createing file system kind off
+MaTreeModel, MatIconModule MatButtonMdule
+MatTreeNestedDataSource
+`
+this.nestedTreeDataSource = new MatTreeNestedDataSource<FileNode>();
+
+Why we are using flat tree.
+
+dataChange:BehaviourSubject<FileNode> = new BehaviourSubject<FileNode>([]);
+This is the actuall data.
+
+this.dataChange.subscribe(_data => {this.nestedTreeDataSource.data = _data});
+bind this actual data to datasource
+
+this.nestedTreeControl = new NestedTreeControl<FileNode>(this._getChildren);
+
+this._getChildren = (node:FileNode) => {return of(node.children)} // return the observable.
+It controls collapse and expand
+
+list-style-type: node
+
+<mat-tree [dataSource]="nestedDataSource" [treeControl]="nestedTreeControl" class="extTree">
+	<mat-tree-node *matTreeNodeDef="let node">
+		<li>
+			<button mat-icon-button disabled></button>
+			{{node.fileName}}: {{node.type}}
+		</li>
+	</mat-tree-node>
+	
+	<mat-tree-node *matTreeNodeDef="let node; when hasNestedChild">
+		<div class="matTreeNode">
+			<button mat-icon-button matTreeNodeToggle >
+				<mat-icon>
+					{{nestedTreeControl.isExpanded(node)? "expand_more": "cevronright" }}
+				</mat-icon>
+			</button>
+			{{node.fileName}}: {{node.type}}
+		</div>
+	</mat-tree-node>
+</mat-tree>
+
+hasNestedChild = (_: number, nodeData: FileNode) => {return !nodeData.type} 
+
+<ul [class.example-tree-invisible]="!nesteTreeControl.isExpanded()">
+	<ng-container matTreeNodeOutlet></ng-container>
+</ul>
+
+https://www.youtube.com/watch?v=BALaj39rbZE

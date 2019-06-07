@@ -1,0 +1,34 @@
+function courseSoruceProvider(http: Httpclient) {
+	return new CourseProvider(http);
+}
+
+injection token is unique identifier, each dependency has unique token
+COURSE_SOURCE = new InjectionToken<CourseSource>('COURCE_SORUCE');
+
+
+when we do in constructour
+
+constructour(@inject(COURCE_SORUCE) private courseSource: CourseSource)
+
+
+
+We need to place request of create instance of dependency using token. that;s why we @Inect COURCE_SORUCE
+@Component/or moduel class
+
+
+providers: [
+	{
+		provide: COURCE_SORUCE,
+		useFactory: courseSoruceProvider,
+		deps: [Httpclient]
+	}
+]
+
+every dependency has unique injection token, and have provide factory function.
+angular also does the same thing di.
+https://angular-university.io/course/angular-course
+https://www.youtube.com/watch?v=tA9tuKbg5Yk
+
+Angular university 
+https://www.youtube.com/channel/UC3cEGKhg3OERn-ihVsJcb7A
+is very good.

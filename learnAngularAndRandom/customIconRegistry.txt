@@ -1,0 +1,31 @@
+https://www.youtube.com/watch?v=aL8kh54GxKI
+https://material.io/tools/icons/
+
+https://material.angular.io/components/icon/examples
+
+export class IconSvgExample {
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+        'thumbs-up',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/thumbup-icon.svg'));
+  }
+  
+  
+for to register custom icon
+we use two classes two register icon
+MatIconRegistry
+DomSanitizer domSamitrizer. I think by default we can not download any file through angular it eanble security.
+but to download icon we have to by pass the security.
+
+this.iconRegistry.addServiceIcon("iconname", this.domSamitrizer.byPassSecurityTrust('asserts/icons/_iconName'.svg));
+this.iconRegistry.addServiceIcon("iconname" + themeName, this.domSamitrizer.byPassSecurityTrust('asserts/icons/ + '_iconName' + themeName + .svg));
+
+and when we use
+<matIcon style="" svgicon="iconName"> </matIcon>
+
+
+MatIconRegistry is an injectable service that allows you to associate icon names with SVG URLs, 
+HTML strings and to define aliases for CSS font classes. Its methods are discussed below and listed in the API summary.
+
+for font purpose
+http://google.github.io/material-design-icons/#icon-font-for-the-web

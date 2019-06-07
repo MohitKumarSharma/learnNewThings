@@ -1,0 +1,22 @@
+In template we can use the reference of other html compoennt using name just define with
+#fileUpload
+
+https://blog.angular-university.io/angular-viewchild/
+
+and then ise
+fileUpload.click()
+
+But sometime we need tthose refenrece in our class ifle
+that why viewChild comes in picutre
+
+Check why #used. It is used to mark template reference in angular. Now it used as template which can be get form other template and from other clas.
+
+Viewchild does not directly inject the refenrece, it inject after the view init.
+So if we should use that refenrece only in ngAfterinit or after the make sure rendering,.
+
+ @ViewChild('primaryColorSample', {read: ElementRef})
+  sample: ElementRef;
+In this case, we are using the read property to specify that we want to get the DOM element (wrapped by ElementRef) of the matched template reference, and not the component.
+
+Why we use $
+
