@@ -1,0 +1,8 @@
+xss: executing code on server side. like any script sends on request params and execute on server side.
+
+XSRF : Crose site request forgery Cross Site Request Forgery attacks are not an issue if you are using JWT with local storage.:
+On the other hand, if your use case requires you to store the JWT in a cookie, you will need to protect against XSRF. Because it can easily fetch from cookies and sends to
+others.
+How we save password in our case.
+
+Check about security of our hdca app.
