@@ -1,0 +1,32 @@
+1) Cloud system storage.
+
+Reliability and Durability:
+Scalability
+
+Be sure to ask questions to find the exact scope of the system that the interviewer has in mind.
+
+Requiredment; 
+Offline diditing and synched as soon as it comes online.
+
+The system should support snapshotting of the data, so that users can go back to any version of the files.
+
+A solution to the above problem could be to use HTTP long polling.
+
+Metadata about file.
+
+Permission table: It will be stored in metadata in 
+LoadBalancer: round robing with request to check the capability of server.
+Caching: frequently access file usinng lru technique.
+
+Metadata partitioning: Using hash based partioning
+
+ Data Deduplication: In line deduplicaton.
+ 
+ Cloud block storage:
+ Meta data about file.
+ 
+ Messaging queue service.
+ 
+ Synchronization service; to each client and remote server.
+ 
+ Metadata database: RDMS better because of acid property.

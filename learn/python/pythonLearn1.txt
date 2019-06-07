@@ -1,0 +1,142 @@
+each variable in python has type
+dynamically type checking means type of the variable is decided at runtime
+
+interpereted but it internally compile and convert it into byte code, but it hardly sees to us
+
+
+read about hdfs file systems.
+
+
+>>>  it shows it is waiting for input
+
+In ubantu already python3
+
+REPL
+Read
+Evalutate
+Print
+Loop Back
+
+Ctrl+D
+
+
+fd command to bring process back.
+
+By default contemprary python code indented by four space
+Indented language
+
+Never mix spaces and tabs
+
+Programming as guido indented it.
+
+Python statndard library
+batteries.
+
+/
+//
+53 bits in binary equivalenet to 15/16 digits.
+
+empty list are false
+
+explicit is better than implicit.
+KeyBoardInputException. CTRL + C
+
+input()
+
+
+quoting string.
+
+unicode point
+
+in the literal default unicode UTF-8
+
+
+multiline """
+
+\n universal newlin
+
+String are immutable in python
+s[0] it gives tpe str
+
+hexadecimal representaitton.
+
+Sequence of unicode codepoint is string.
+
+bytes
+	
+	Everything is bytes stream.
+	
+	List is hetrogeneous
+	[]
+	
+	
+	Dcitionaryies
+	{key: value}
+	d[key]
+	
+	
+Read latter.
+
+For document purpose we can do
+#
+"""" documents fshdjfh"""
+
+0 th name is module file name
+1 is entered fuke bame
+
+sys.argv[0] the script file name.
+print function print is like println.
+
+Check about main function how it is used.
+
+
+#usr/bin/env poython3
+
+range(0,4) collections
+
+enumerate(t)
+	print(p);
+	
+	s[1:4]
+	
+in or Not in operator
+list.indexOf("mohit")
+
+del list[3] // to removew.
+list.remove("mohit");
+
+
+can contactentate the list.
+
+sort reverse method
+
+Dictinary:
+Kye value;
+Key must be immutable.
+tuples are immuable.
+
+dict.imtes() key, values
+
+
+Exectiption in pythonng
+
+raise
+
+How is the file is passed to print function
+
+EAFP + Exception
+
+comprehension expression
+
+
+generator are singlue used objects.
+
+Comprehension
+
+python3 -m venv venv3
+
+source venv3/bin/activate
+
+deactivate to come out.
+
+Read about python compiler and under the hood

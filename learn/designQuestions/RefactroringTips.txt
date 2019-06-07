@@ -1,0 +1,28 @@
+ When you find you have to add a feature to a program, and the program’s code is not structured in a convenient way to add the feature, first refactor the program to make it easy to add the feature, then add the feature.
+ 
+ Before you start refactoring, check that you have a solid suite of tests. These tests must be self-checking.
+ 
+ INLINE TEMP
+ 
+ REPLACE TEMP WITH QUERY
+ 
+ SPLIT TEMPORARY VARIABLE
+ 
+ PULL UP The field
+ f the fields are private, you will need to protect the superclass field so that the subclasses can refer to it.
+ 
+ default is not access outside the package.
+ protected is accessed outside the package for subclassses.
+ 
+ One of the principal tenets of object orientation is encapsulation, or data hiding. This says that you should never make your data public. When you make data public, other objects can change and access data values without the owning object’s knowing about it. This separates data from behavior.
+ 
+ Regular refactoring helps code retain its shape.
+ 
+ Two of the first people to recognize the importance of refactoring were Ward Cunningham and Kent Beck, who worked with Smalltalk from the 1980s onward. 
+ 
+ INTRODUCE PARAMETER OBJECT
+ 
+ . Polymorphism is better because the caller does not need to know about the conditional behavior, and it is thus easier to extend the conditions. As a result, object-oriented programs rarely have switch (case) statements. Any that show up are prime candidates for Replace Conditional with Polymorphism (255).
+ 
+ 
+ NULL Design pattern

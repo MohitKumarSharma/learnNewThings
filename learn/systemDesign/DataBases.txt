@@ -1,0 +1,49 @@
+SQL And NOSQL:
+https://www.educative.io/collection/page/5668639101419520/5649050225344512/5728116278296576
+
+Sql  is structured query language
+
+NOSQL: Key value pair based: reddis, dynamoc
+document based: Mongo db, mars db
+Wide Column database: columnar, column family, not all column needed upfront, exmaple cassandra and HBase
+Graph DataBase: Infintie graph
+
+
+Most of the NoSQL solutions sacrifice ACID compliance for performance and scalability.
+
+SQL: Veritcal callable: for distriuting this db its very challenching task
+No SQL: Horrizontal scalable: Some of the db itself probive distribution.
+
+Load Balancing:
+Avoid single point of failure.
+
+Health Checks - Load balancers should only forward traffic to “healthy” backend servers. 
+
+
+Two design question have to study:
+Parking lot,
+Type ahead problem.
+Threading questions.
+
+Weighted Round Robin Method:
+
+Clusture of loadBalance to handle single point of failure.
+
+
+Type ahead search:
+
+DataBase:
+
+
+Traversak tree without recursion all type of
+Inorder: done
+Preorder: done
+Inorder: done
+
+
+HeapSort, write it.
+Designing backup systems: 
+Threading: 
+Sorting a huge file: See the code and implement:
+Code we have to see
+sorting done.

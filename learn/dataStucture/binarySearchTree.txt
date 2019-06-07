@@ -1,0 +1,46 @@
+The left subtree of a node contains only nodes with keys lesser than the node’s key.
+The right subtree of a node contains only nodes with keys greater than the node’s key.
+The left and right subtree each must also be a binary search tree.
+There must be no duplicate nodes.
+
+Read about locking read and write locks.
+30 m
+iterator 30 m
+testng 2 h
+
+public void insertNode(Node root, int newData) {
+	
+	current = root;
+	temp = current;
+	while (current != null) {
+		temp = current;
+		if (newData < root.data) {
+			current = current.left;
+		} else if (newData > root.data) {
+			current = current.right;
+		}
+	}
+	
+	if (temp.data < newData) {
+		temp.right = new Node(newData);
+	} else {
+		temp.left = new Node(newData);
+	}
+}
+
+public void deleteNode(Node root, int data) {
+	if (root == null) {
+		return;
+	}
+	
+	if (root.data == data) {
+		Node right = root.right;
+		Node left = root.left;
+		Node leftRight = left.right;
+		
+		left.right = right;
+		right.left = leftRight;
+		
+		root = null
+	}
+}

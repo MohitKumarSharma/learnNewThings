@@ -1,0 +1,68 @@
+Read about method referencing.
+
+in JDK 7
+concatenation is compiled with stringBuilder
+
+StringJoiner:
+this class is used to join string as suggested.
+
+
+StringJoiner sj = new StringJoiner(", ", "{", "}" );
+		
+sj.add("one").add("two").add("three");
+
+Can be used from class.	below one has not option of prefix and suffix.
+String sj = String.join(", ", iteratorObj)
+
+Stream are autoclosable.
+in java 7
+
+Path path = Paths.get("d", "mohit", "r.txt");
+
+try (Stream<String> stream = Files.lines(path)) {
+}
+
+
+// To works on file systems // Files.walk(path, 3) // for depth of level
+try (Stream<Path> stream = Files.walk(path)) {
+}
+
+New method on collections interace
+stream parallel stream.
+
+and spliterator to split the stream to parallelized the stream.
+list.sort(Comparator.naturalOrder())
+
+Comparator<String> comparator = Comparator.naturalOrder();
+Comparator<String> comparator = comparator.nullFirst(Comparator.naturalOrder());
+
+New method on number type.
+
+long max = Long.max(12, 23L);
+
+Reduction operatoru
+BinaryOperator<Long> sum = (l1, l2)-> (l1 + l2)=
+`= Long::sum
+
+hash code test
+Long.hashCode(ll); // boxing and unboxing.
+
+on map.getOrDefault(key, defultValu);
+
+replace to repalce old value
+putIfAbsetn
+
+remove(key, value)
+
+New mtehtod on map 
+compute and merge
+
+mapp.merge(key, value (v1, v2) -> {  v1.addall(v2); return v1;})
+subList of list
+
+Bimap:
+
+We can 
+@NonNull List<Person> pList;
+That means this list should not be null.
+Check what happens if it has.

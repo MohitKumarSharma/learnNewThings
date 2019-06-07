@@ -1,0 +1,43 @@
+Openclient: streaming video.
+
+Cleint any device 
+
+latency: time required to perform some action mean after url, time required to play the video.
+https://www.comparitech.com/net-admin/latency-vs-throughput/
+
+Latency: time rquired ot reach packet to its destination is called latency.
+
+ThroughtPut:  is the number of packets transferred in t amount of time.
+
+Bandwidth: maximum number of packet that network support to transferred.
+
+As we said earlier, throughput is the term used to refer to the quantity of data being sent that a system can process within a specific time period. Throughput is a good way to measure the performance of the network connection because it tells you how many messages are arriving at their destination successfully. If the majority of messages are delivered successfully then throughput will be considered high. In contrast, a low rate of successful delivery will result in lower throughput.
+
+Letncy: in milliseconds
+Throghtput: bit per second mbps
+
+When we are requesting a video from india, that server which exist in india should serve the request, that means we will have duplicate/replica of database.
+netflix has placed a lot of server in each country.
+
+open connect is distribute server which is maintained by netflix.
+
+as first requect comes
+firs picture comes
+loadbalencer - > which divides the request in zones by specific to zones or round robind if muliple zone.
+
+next level lb is using array of server using differenct technlogy.
+
+Transcoding: is the converting a video to differnt format 
+
+according to batndwith resolutino changes
+
+Client is so smart they check bandwith, swithed the video resolution.
+
+Always make the api are stateless.
+
+Netflix is always use caching .
+
+MySql: it is used to store critical situation.
+Casssandra: NoSql: USer history, user interest
+
+ 

@@ -35,7 +35,7 @@ Numbers {
 
 public class User/Client {
 	psvm() {
-		AddNumbers add = new AddNumbers();
+		Chain add = new AddNumbers();
 		SubtractNumber subtract = new SubtractNumber();
 		
 		add.setNextChain(subtract);

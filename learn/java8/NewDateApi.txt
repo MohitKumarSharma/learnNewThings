@@ -1,0 +1,76 @@
+DataApi
+
+Read about executor frameworkd some required api. done
+threading puzzle 
+and Normal puzzle
+system design question.
+
+
+Int the java8 we have 
+
+Instant class 
+Which is instant on timeline.
+
+It immutable class
+
+Instant = Instant.now();
+
+Second key concept
+Duration class
+
+It is the amount of time between two instant object.
+
+there are muliple mehtod on this class.
+
+duration.toMillise() erric
+
+plusNannos
+
+3rd concept is localDate:
+why this it is becase instant has depth to nanno level management but some time we dont have nano level infor so we can use localDate.
+LocalDate localDate = LocalDate.now();
+
+LocalDate lc = LocalDate.of(1564, Month.APRIL, 10);
+
+Period: is same concept as Duration but here we dont go to nano level.
+
+Period p = lc.until(now);
+p.getYear(); // to get years from then 	
+
+long days = lc.until(now, Chronounit.Days); // number of days
+
+DateAdjuster:
+
+LocalDate now = LocalDate.of(2019, Monght.APRIL, 24);
+LocalDate nextSunday = now.with(TemporalAdjusters.next(DaysOfWeek.SUNDAY));
+
+6th Conceput
+LocalTime is the when you ask your friend to meet at lunch at 1pm.
+LocalTime lt = LocalTime.now();
+LocalTime lt = LocalTime.of(10, 20); // 10:20 am
+
+many tmehtod 
+lt.plusHours(8);
+
+Lst conceput is 
+ZonedTime:
+ZoneDateTime zdt = ZoneDateTime.of(1564, Month.APRIL, 10, 10,0,0,0, ZonedId.of("Europe/london"));
+
+zdt.plus(Period.Month);
+
+To change timezone.withSameZoneTimeInstant(ZoneIf.of("US/Central"));
+
+DateTimeFormatter is a class which format the date.
+DateTimeFormatter.ISO_DATE_TIME.format(zdt); 2014-04-11T03:00:00-00:00[US-Central ]
+DateTimeFormatter.RFS_1123_DATE.format(zdt); 12 april 2014...
+
+
+Api to legacy
+Date date  = Date.from(instant);
+Instant date = date.toInstant();
+
+abot fro TimeStamp, LocalDate also
+
+And also LocalTime
+
+ZoneDateTime ustTime = zdt.

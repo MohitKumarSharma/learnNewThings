@@ -1,0 +1,64 @@
+till 11
+
+Iterator : 30 m
+Java8: finshing touch: 1:30m
+
+TestNG: 2h
+
+time permits:
+may least priority
+SystemDesignQuestion: 1
+Or
+DataStructure: 1h
+
+
+
+Iterator using iterator we can remove element.
+
+Try class inside a method let see
+Check interface and class.
+
+It is more efficient on large collection of object:
+
+pitfalls:
+It does not give index. when you need index, this is not right choice.
+
+Interafce based
+No index
+Concurrent modification
+Algorithm is removed from client side
+
+For loop
+Is slower in most cases
+
+BikeRepository implement Iterator<String> {
+	String bikes[] = new String[10];
+	int size =;
+	
+	public addbike(String bike) {
+		bikes[size++] = bike;
+	} 
+	
+	public Iterator<String> iterator() {
+	
+		Iterator<String> itr = new Iterator() {
+			int currentIndex = 0;
+			
+			public boolean hasNext() {
+				if (currentIndex < this.bikes.size()) {
+					return true;
+				}
+				
+				return false;
+			}
+			
+			public String next() {
+				return bikes[currentIndex++];
+			}
+		
+		}
+		
+		return itr;
+	}
+	
+}

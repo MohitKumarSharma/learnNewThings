@@ -1,0 +1,67 @@
+List<person> ll = new ArrayList();
+
+Average age of person who is less that 20
+
+first mapping means in put list<Person> and return List<Integer> (ages of people).
+
+Second step is filter
+It takes List<Integer> and returns the List<Integer>. may be less element as filtered out.
+predicate
+
+
+Reduce : This the reduction operation equivalent ot SQL aggregation.
+
+
+What is steams:
+
+It is typed interface
+
+public interface Stream<T> extends BaseStream<T, Stream<T>> {
+}
+
+Stream is efficient to process large amount of data.
+
+Efficiently means:
+Parallel processing  to leaverage computing power of multicore cpu.
+PipeLined: to avoid unnecessary intermediary computation.
+
+What is stream?
+An Object on which operation can be defined.
+Steam does not hold any data.
+An Object able to process the data in one pass means like map reduce filter all in one pass.
+
+Consumer chaining
+
+Consumeer<String> c3 = c.andThen(c2);
+
+ll.stream().filter(person -> person.getAge() > 20);
+
+It filter takes predicate method.
+
+Predicate<String> p = Predicate.isEqual("two");
+
+Sream<String> st1 = Stream.of("one", "two");
+
+
+Stream<String> st2 = st1.filter(p1);
+
+Back To consumer
+An Operation on a stream that returns a new stream is called intermediary operation
+All the method that returns stream  are lazy
+
+
+person.stream().peek(System.out.println()).filter(person.getAge() > 20).peek();
+
+What does this function do, it does nothing because all the operation is intermediary operation as stream are lazy this will do nothing.
+
+forEach is final oepratin as it does not returns any things.
+
+Finish Java8
+Start Parallel multi threading.
+Iterator design pattern.
+Iterpreter design pattern.
+Visitor
+
+Design questions
+Problem solving.
+data structure

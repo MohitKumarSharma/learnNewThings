@@ -1,0 +1,61 @@
+Independent computer seems user single computer.
+
+operate concurrently
+fail indepedenlty
+
+donnt share gobal clock.
+
+https://www.youtube.com/watch?v=Y6Ev8GIlbxc
+
+Cap theorem:
+Consistency 
+Availability
+Partion tolerance:  means communication between nodes are broken.
+
+At a time only two can achieve. We have to giveup on other in distributed system.
+
+Consistency Hashing:
+One system desing questions: Today
+
+https://www.educative.io/collection/page/5668639101419520/5649050225344512/5754903989321728
+
+https://www.youtube.com/watch?v=Jw1iFr4v58M
+
+check about consistent hashing.
+
+
+Caching is all level in achetecture.
+but found nearest to frontend.
+
+application server cache.
+
+Ask that link can be shared or access my other content check and ask.
+
+
+LRU Cache:
+Doubly linkedList means queue with 
+The most recently used pages will be near front end and least recently pages will be near rear end.
+will have hasSet to check whetherr element is present in queue of not.
+
+Whenever the new element is added it should front of quue and least recently will at rear end of the quue. if new element is added it is not in queue. if full removed from end of the queue but add this element. If element is reinseritn again then first remove that element from that index and add it at the front of the queue.
+
+LinkedHashMap is one of the best data structure which can be used.
+
+
+https://www.studytonight.com/servlet/httpsession.php
+
+Mirror image of tree test?
+
+Design tiny url system ?
+java garbage collector thread.
+minimmum/maximum number of coins.
+jumping jacks problem in dynamic programming.
+parking garage
+
+implement binary tree using array
+
+Rest api for room allocation system design archatecture.
+
+some design question BookMyShow system design question
+
+finish tutorail point to learn basic python, will see: Today 20 minutes more to study that

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <listeners>
+    <listener class-name="learnTestNG.CustomTestNgListener1"/>
+  </listeners>
+  <test thread-count="5" name="Default test(failed)">
+    <parameter name="firstName" value="Mohit"/>
+    <groups>
+      <run>
+        <include name="all"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="learnTestNG.TestCalc">
+        <methods>
+          <include name="testMul"/>
+          <include name="init"/>
+          <include name="testAdd"/>
+          <include name="testDiv"/>
+        </methods>
+      </class> <!-- learnTestNG.TestCalc -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

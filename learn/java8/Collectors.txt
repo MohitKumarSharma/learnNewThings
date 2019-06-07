@@ -1,0 +1,26 @@
+There is another kind of reductin operation
+which is called collectors.
+
+List<Person> pList;
+
+List<String> result = pList.stream().map(p -> p.getName()).collect(Collectors.toList());
+
+List<String> result = pList.stream().map(p -> p.getName()).collect(Collectors.groupBy(Person: getAge(), Collectors.counting()));
+
+
+new mthod 
+BufferedReader br.
+
+Stream<String> stream = reader.lines();
+
+steam.map(line -> {
+}).
+
+check about method referencing properly it still confusing
+
+
+creating and decalring stream is very light weight process, and stream can only be used once.
+
+collectors.mapping(Person: getName, Collectors.toList())
+
+Collectors.toCollection(TreeSet::new)

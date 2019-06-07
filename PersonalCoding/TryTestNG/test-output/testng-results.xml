@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="30" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="30" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+      <class name="learnTestNG.TestLifeCycle">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="beforeSuite" is-config="true" duration-ms="8" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="beforeTest" is-config="true" duration-ms="0" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="beforeClass" is-config="true" duration-ms="0" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="test()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="test" duration-ms="4" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="test1" duration-ms="1" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="test2()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="test2" duration-ms="2" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="afterClass" is-config="true" duration-ms="0" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:learnTestNG.TestLifeCycle@53b32d7]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-06-03T09:49:06Z" finished-at="2019-06-03T09:49:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- learnTestNG.TestLifeCycle -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

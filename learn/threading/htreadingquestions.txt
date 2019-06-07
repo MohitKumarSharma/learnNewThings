@@ -1,0 +1,3 @@
+Threade scheduler is part of the jvm.
+threading questions,
+may be one more design pattern

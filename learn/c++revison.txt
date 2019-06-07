@@ -1,0 +1,40 @@
+C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural, object-oriented, and generic programming.
+
+C++ is regarded as a middle-level language, as it comprises a combination of both high-level and low-level language features.
+
+C++ is a superset of C, and that virtually any legal C program is a legal C++ program.
+
+C++ is being highly used to write device drivers and other software that rely on direct manipulation of hardware under realtime constraints.
+'
+The size of variables might be different from those shown in the above table, depending on the compiler and the computer you are using.
+
+ cout << "Size of char : " << sizeof(char) << endl;
+   cout << "Size of int : " << sizeof(int) << endl;
+   cout << "Size of short int : " << sizeof(short int) << endl;
+   
+   typedef int feet;
+   
+   feet m1;
+   
+  read about extern in 
+  
+ When a local variable is defined, it is not initialized by the system, you must initialize it yourself. Global variables are initialized automatically by the system when you define them as follows −
+ 
+ int	0
+char	'\0'
+
+Check about glbal variable.
+
+Reference to variable is alteernate to pointer.
+it uses &
+
+int b = 10;
+int& a = b;
+
+printlnf(a )// 10;
+&a will  print address
+
+check about why 
+scanf("%c", &ch);
+
+is not working as expected,.

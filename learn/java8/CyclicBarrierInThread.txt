@@ -1,0 +1,29 @@
+This is the one good way to stop all the threads at checkpoint
+
+CyclicBarrier class does that.
+CyclicBarrier cyclicBarrier = new CyclicBarrier(3, ()->  {System.out.println("Stopped for refilling");});
+		
+		Biker mohit = new Biker("Mohit", cyclicBarrier);
+		Biker aniketh = new Biker("Aniketh", cyclicBarrier);
+		Biker parag = new Biker("Parag", cyclicBarrier);
+		
+		
+public void run() {
+		try {
+			System.out.println(this.name + " has left Rampur");
+			this.barrier.await();
+			
+			System.out.println(this.name + " has reached first checkpoint Mathura");
+			
+			this.barrier.await();
+			
+			System.out.println(this.name + " has reached first checkpoint ahmadnagr");
+			
+			this.barrier.await();
+			
+			System.out.println(this.name + " has reached destination pune");
+			
+		} 
+		
+This is the good concept which can be used.
+		

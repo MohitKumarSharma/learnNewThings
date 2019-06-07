@@ -1,0 +1,5 @@
+DFS: Go in deep, recursive find solution means use stack.
+
+Use visited array to avoid infinite loop, to track node are not traverse more than once incase of cycle.
+
+BFS: Go wider, Go level by level use queue.

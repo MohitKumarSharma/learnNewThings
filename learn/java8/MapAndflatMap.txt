@@ -1,0 +1,75 @@
+Mapper function is Functional interface
+called
+
+public interface Function<T, R> {
+	R apply();	
+	
+	default <V> Function<V, R> compose(Function<? super V, ? extend T> before); 
+
+	default <V> Function<V, R> andThen(Function<? super R, ? extend V> after); 
+	
+	static <T> Function<T, T> identity() {
+		return t -> t;
+	}
+}
+
+<R> Stream<R> map (Functin<T, R> mapper)
+<R> Stream<R> flatMap(Functin<T, Stream<R> flatMapper>
+flatMap:
+Takes an argument of t and return stream of R.
+
+List<ArrayList<Integer>> ll;
+
+
+Read about flatMap later. after video finshed.
+
+Reduction Operations:
+
+Bifunction: is 
+
+ R Bifunction(T, U, R) {
+	
+}
+
+T BinaryOperator(T, T, T) {
+}
+
+stream.reduce(0, (age1, age2) -> age1 + age2);
+
+first arguement is indentity element which can be understand as starting element,
+second is lambda funciton which is Binary operator which is inspered from bifunction.
+
+stream.max(Comparator.naturalOrder());
+
+Optional<Integer> it may or may not have value. it wrapper on the primitive classes class.
+
+String s = opt.orElsethrow(MyException:: new);
+
+Avaliable reduce
+max, min, count, sum
+
+fundFirst returns an optinal
+
+reduction does not return stream so they are not intemediary operation, means they are terminal operation.
+
+booean reduction
+allMathc, noneMach, anyMathc
+
+Check it
+Static methods can not be overridden. But can be overloaded since they are resolved using static binding by the compiler at compile time.
+
+instance method can be overriden
+
+We can change use map function on on optinal to parse the. like optinal string to optinal int.
+
+It actually flatten the list
+example 
+list<List<Integer>> ll;
+
+ll.stream().flatMap(l -> l.stream());
+
+it returns the 
+Stream<Integer>;
+
+
+allmatch is best exmple funcitn chaining to stop after once the computeation failed

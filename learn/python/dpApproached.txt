@@ -1,0 +1,20 @@
+We will do shortest path
+
+Overlapping means same problem is solved again and again.
+n -, n -1 problems solve again and again.
+
+OptimalSubstructre: If we can build a solution of larger problem by using subproblem, then it is called optimal substrure
+fib[n] = fib[n - 1] + fib[n - 2];
+
+Then this case we can say optimal substructure
+
+FloyedWarshal
+BellmanFord are typical example
+Try them 
+Shrotest path
+
+
+Its some king of similar divide and conquer problem, but in divide and conquer(Its optimal substructure problem) same problem does not repeat.
+In dp problem on addinal propery overlapping subproblem means same problem is solved multiple problem. instead solving again and again we can store that solution and use it later.
+
+Certain problem recursin is much easier to read and understand then iterative solutino

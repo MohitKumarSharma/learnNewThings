@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<suite  guice-stage="DEVELOPMENT"  name="Default suite" parrallel="methods" thread-count="5" >
+		<listeners>
+			<listener class-name="learnTestNG.CustomTestNgListener1" />
+		</listeners>
+
+	<test thread-count="5" verbose="2" name="Default test">
+		<groups>
+			<define name="all">
+				<include name="increment" />
+				<include name="decrement" />
+			</define>
+			
+			<run>
+				<include name="all"/>
+			</run>
+		</groups>
+		<parameter name="firstName" value="Mohit" />
+		<classes>
+			<class name="learnTestNG.TestCalc"/>
+			<!-- <class name="learnMockito.MathApplicationTest"/> -->
+		</classes>
+		
+	</test>
+	<!-- <test thread-count="5" verbose="2" name="test1">
+		<classes>
+			<class name="learnTestNG.FirtTestNGCLASS"/>
+		</classes>
+	</test> -->
+</suite>
